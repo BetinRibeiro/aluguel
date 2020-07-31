@@ -1,0 +1,75 @@
+{{extend 'layout.html'}}
+<div class="py-2">
+    <div class="container">
+        
+      <div class="row">
+        <div class="col-md-6">
+      <h3 class="">
+          <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>| 
+          <b>Relatório de Contratos</b> | 
+          <a href="{{=URL('pessoa', 'cadastrar_contrato')}}">
+              <i class="fa fa-fw fa-1x py-1 fa-plus-square"></i>
+          </a>
+      </h3>
+             </div>
+        <div class="col-md-6">
+            <div class="form-group row">
+                <input type="text" class="form-control col-10 col-form-label" name="busca" placeholder="Faça uma pesquisa" />
+              <div class="col-2">
+                  <a class="btn btn-outline-light col-2 botao">
+                      <i class="fa text-success fa-search  fa-1x"></i>
+                  </a>
+                </div>
+            </div>
+      </div></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                  <th>Imovel</th>
+                  <th>Locatario</th>
+                  <th>Valor</th>
+                  <th class="text-center">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  {{a+=1}}
+                <tr>
+                    <th>{{=a}}</th>
+                  <td>{{=row.imovel.lougradouro}}</td>
+                  <td>{{=row.locatario.nome}}</td>
+                  <th>{{=row.valor}}</th>
+                  <td class="text-center">
+                    <i class="fa fa-fw fa-1x py-1 fa-archive"></i>
+                    <i class="fa fa-fw fa-1x py-1 fa-book"></i>
+                    <i class="fa fa-fw fa-1x py-1 fa-calendar "></i>
+                      <a href="{{=URL('alterar_pessoa', args=row.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-file text-warning"></i>
+                      </a>
+                  </td>
+                    {{pass}}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    var inputElement = document.querySelector('input[name=busca]');
+    var btnElement = document.querySelector('a.botao');
+
+    btnElement.onclick = function(){
+     var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+
+    }
+
+</script>

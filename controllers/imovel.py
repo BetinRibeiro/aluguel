@@ -1,0 +1,123 @@
+# -*- coding: utf-8 -*-
+@auth.requires_login()
+def cadastro_imovel():
+    response.view = 'generic.html' # use a generic view
+    form = SQLFORM(db.imovel).process()
+    if form.accepted:
+        redirect(URL( 'acesso'))
+    elif form.errors:
+        response.flash = 'Formulario não aceito'
+    #else:
+        #response.flash = 'Preencha o formulario'
+    return  dict(form=form)
+
+
+@auth.requires_login()
+def cadastrar_despesa():
+    response.view = 'generic.html' # use a generic view
+    imovel = db.imovel(request.args(0, auth.user))
+    tipodesp=(request.args(1))
+    
+    db.despesa.imovel.default = imovel.id
+    db.despesa.imovel.writable = False
+    form = SQLFORM(db.despesa).process()
+    if form.accepted:
+        redirect(URL( 'acesso_imovel', args=imovel.id))
+    elif form.errors:
+        response.flash = 'Formulario não aceito'
+    #else:
+        #response.flash = 'Preencha o formulario'
+    return  dict(form=form)
+
+@auth.requires_login()
+def acesso_imovel():
+    imovel = db.imovel(request.args(0, cast=int))
+    rowscont = db((db.contrato_aluguel.imovel==imovel.id)&(db.contrato_aluguel.imovel==imovel.id)).select(orderby=db.contrato_aluguel.data_inicial)
+    rowsdesp = db((db.despesa.imovel==imovel.id)&(db.despesa.imovel==imovel.id)).select(orderby=db.despesa.data_pagamento)
+    return locals()
+
+
+@auth.requires_login()
+def acessar_contrato():
+    contrato = db.contrato_aluguel(request.args(0, cast=int))
+    imovel = db.imovel(db.imovel.id==contrato.imovel)
+    locador = db.pessoa(db.pessoa.id==contrato.locador)
+    locatario = db.pessoa(db.pessoa.id==contrato.locatario)
+    avalista = db.pessoa(db.pessoa.id==contrato.avalista)
+    rows = db(db.recebimento.contrato_aluguel == contrato.id).select()
+    return locals()
+@auth.requires_login()
+def alterar_despesa():
+    response.view = 'generic.html' # use a generic view
+    despesa = db.despesa(request.args(0, cast=int))
+    imovel = db.imovel(despesa.imovel)
+    db.despesa.id.readable = False
+    db.despesa.id.writable = False
+    deletar= True
+    form = SQLFORM(db.despesa, request.args(0, cast=int), deletable=deletar)
+    if form.process().accepted:
+        session.flash = 'Atualizado'
+        redirect(URL('acesso_imovel', args=imovel.id))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+@auth.requires_login()
+def alterar_imovel():
+    response.view = 'generic.html' # use a generic view
+    db.imovel.id.readable = False
+    db.imovel.id.writable = False
+    rows = db((db.contrato_aluguel.imovel==(request.args(0)))).select()
+    deletar= True
+    if len(rows)>0:
+        deletar= False
+        #db.imovel.id.readable = False
+        #db.imovel.id.writable = False
+        #db.imovel.tipo.writable = False
+        #db.imovel.subtipo.writable = False
+        #db.imovel.uf.writable = False
+        #db.imovel.lougradouro.writable = False
+        #db.imovel.cep.writable = False
+        #db.imovel.bairro.writable = False
+        #db.imovel.cidade.writable = False
+        #db.imovel.numero.writable = False
+    form = SQLFORM(db.imovel, request.args(0, cast=int), deletable=deletar)
+    if form.process().accepted:
+        session.flash = 'Atualizado'
+        redirect(URL('acesso'))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+@auth.requires_login()
+def acesso():
+    #response.view = 'generic.html' # use a generic view
+    rows = db(db.imovel).select(orderby=db.imovel.bairro,limitby=(0,50))
+    consul=(request.args(0))
+    if (consul):
+        if (consul!='disponiveis'):
+            rows = db((db.imovel.bairro.contains(request.args(0)))|
+                      (db.imovel.tipo.contains(request.args(0)))|
+                      (db.imovel.lougradouro.contains(request.args(0)))|
+                      (db.imovel.subtipo.contains(request.args(0)))).select(orderby=db.imovel.id,limitby=(0,50))
+        else:
+            rows = db(db.imovel.disponivel==True).select(orderby=db.imovel.bairro,limitby=(0,50))
+    tmn4=[]
+    for r in rows:
+        #todos contratos do imovel ou contratos do imovel que não foram finalizados
+        tmn=db((db.contrato_aluguel.imovel==r.id)or((db.contrato_aluguel.imovel==r.id) and (db.contrato_aluguel.finalizado==False))).count()
+        tmn4.append(tmn)
+        if tmn>=1:
+            r.disponivel=False
+            r.update_record()
+        else:
+            r.disponivel=True
+            r.update_record()
+        
+    return locals()

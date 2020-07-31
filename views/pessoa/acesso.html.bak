@@ -1,0 +1,88 @@
+{{extend 'layout.html'}}
+<div class="py-1">
+    <div class="container">
+        <marquee direction="left">
+            <h5></h5>
+</marquee>
+      <div class="row">
+        <div class="col-md-6">
+            
+          <a class="text-danger" href="{{=URL('default', 'principal')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar ao Inicio</a>
+            <a class="text-primary" href="{{=URL('pessoa', 'cadastro_pessoa')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-plus-square"></i>Cadastrar Pessoa
+          </a>
+      <h5 class=""> 
+          <b>Relatório de Pessoas</b> 
+          
+      </h5>
+             </div>
+        <div class="col-md-6" id="noprint">
+            <div class="form-group row">
+                <input type="text" class="form-control col-10 col-form-label" name="busca" placeholder="Faça uma pesquisa" id="input"/>
+              <div class="col-2">
+                  <a class="botao">
+                      <i class="fa fa-fw py-1 text-success fa-search fa-2x"></i>
+                  </a>
+                </div>
+            </div>
+      </div></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                  <th>Nome/Razão Social</th>
+                  <th>CPF/CNPJ</th>
+                  <th>Fone</th>
+                  <th class="text-center" id="noprint">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  {{a+=1}}
+                <tr>
+                    <th>{{=a}}</th>
+                  <td nowrap="true">{{=row.nome}}</td>
+                  <td nowrap="true">{{=row.cpf}}</td>
+                  <th nowrap="true">{{=row.telefone}}</th>
+                    {{row.cpf=row.cpf.replace("0001/","0001-")}}
+                    {{row.update_record()}}
+                  <td nowrap="true" class="text-center" id="noprint">
+                    <i class="fa fa-fw fa-1x py-1 fa-archive"></i>
+                    <i class="fa fa-fw fa-1x py-1 fa-book"></i>
+                    <i class="fa fa-fw fa-1x py-1 fa-calendar "></i>
+                      <a href="{{=URL('alterar_pessoa', args=row.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-file text-warning"></i>
+                      </a>
+                  </td>
+                    {{pass}}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    var inputElement = document.querySelector('input[name=busca]');
+    var btnElement = document.querySelector('a.botao');
+
+    btnElement.onclick = function(){
+     var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+
+    }
+    $('#input').keydown(function(e){
+    if (e.which == 13){
+       var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+    }
+    })
+
+</script>

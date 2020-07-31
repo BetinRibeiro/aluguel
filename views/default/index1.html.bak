@@ -1,0 +1,86 @@
+{{extend 'layout.html'}}
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="">
+            <li>Consulta Pessoas</li>
+            <ul class="">
+              <li>Cadastrar Pessoas</li>
+              <li contenteditable="true">Alterar Pessoa</li>
+            </ul>
+            <li>Consulta Imoveis</li>
+            <ul class="">
+              <li>Cadastrar Imoveis</li>
+              <li>Alterar Imoveis</li>
+              <li>Acessar Imovel</li>
+              <ul class="">
+                <li>Consulta Contratos do Imovel</li>
+                <ul class="">
+                  <li>Ver Contrato</li>
+                </ul>
+                <li>Consulta Despesas do Imovel</li>
+                <ul class="">
+                  <li>Cadastrar Despesa</li>
+                  <li>Alterar Despesa</li>
+                </ul>
+              </ul>
+            </ul>
+            <li>Consulta Contratos </li>
+            <ul class="">
+              <li>Cria Contrato </li>
+              <li>Alterar Contrato</li>
+              <li>Acessar Contrato</li>
+              <ul class="">
+                <li>Imprimir Contrato</li>
+                <li>Gerar Parcelas</li>
+                <li>Alterar Parcela</li>
+                <li>Imprimir parcelas</li>
+                <li>Imprimir parcela</li>
+              </ul>
+              <li>Imprimir Contrato</li>
+            </ul>
+            <li>Consultar Recebimento</li>
+            <ul class="">
+              <li>Navegação por datas</li>
+              <li>Alterar Recebimento</li>
+              <li >Imprimir recido</li>
+            </ul>
+          </ul>
+        </div>
+          <div class="col-md-6">
+          <ul class="">
+            <li>Testes</li>
+            <ul class="">
+              <li>Acessibilidade</li>
+              <li contenteditable="true">Usuarios e Segurança</li>
+            </ul>
+            <li>Banco de dados</li>
+            <ul class="">
+              <li>Usuarios</li>
+              <li>Pessoas</li>
+              <li>Imoveis</li>
+              <li>Contratos</li>
+              <li>Recebimentos</li>
+              <li>Despesas</li>
+              
+            </ul>
+            <li>Configurações</li>
+            <ul class="">
+              <li>Servidor Online</li>
+              <li>Servidor de acesso</li>
+              <li>Servidor de Banco de dados</li>
+              <li>Aprimoramento de velocidade</li>
+              <li>Impressão</li>
+            </ul>
+            <li>Treinamento/Testes</li>
+            <ul class="">
+              <li>Teste de usabilidade</li>
+              <li>Teste de Navegação</li>
+              <li>Teste de Impressão</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

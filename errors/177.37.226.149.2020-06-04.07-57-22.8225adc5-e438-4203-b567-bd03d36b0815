@@ -1,0 +1,788 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'bool' object has no attribute 'tablename'"
+p3
+sS'layer'
+p4
+S'/home/rogoberto/web2py/applications/localfs/controllers/default.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f8408e514b0, file "/home/rogoberto/web2py/applications/localfs/controllers/default.py", line 8>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.AttributeError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.AttributeError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.AttributeError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S'"\'bool\' object has no attribute \'tablename\'"'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.AttributeError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.AttributeError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.AttributeError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.AttributeError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.AttributeError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.AttributeError'>"
+p35
+sS'__doc__'
+p36
+S"'Attribute not found.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.AttributeError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.AttributeError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.AttributeError object>"
+p43
+sS'args'
+p44
+S'("\'bool\' object has no attribute \'tablename\'",)'
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.AttributeError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.AttributeError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.AttributeError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.AttributeError object>"
+p55
+ssS'evalue'
+p56
+S"'bool' object has no attribute 'tablename'"
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\xdde\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>localfs</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>pessoa</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-4a96232b-4953-494e-ac8d-4c5e96e92540<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_aluminum</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-e91ec772-39e6-4a9d-b8e5-2a3f33c00140<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_localfs</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-c127bdcb-050a-4e75-85a6-1b9e8823b984<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">DOCUMENT_ROOT</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTPS</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>_ga=GA1.2.786035724.1591068301; session_id_admin=177.37.226.149-4a96232b-4953-494e-ac8d-4c5e96e92540; session_id_localfs=177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a; session_id_welcome=177.37.226.149-c127bdcb-050a-4e75-85a6-1b9e8823b984; session_id_aluminum=177.37.226.149-e91ec772-39e6-4a9d-b8e5-2a3f33c00140</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>https://rogoberto.pythonanywhere.com/localfs/default/simple_grid/pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_SEC_FETCH_DEST</td><td style="vertical-align:top;">:</td><td><div>document</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_SEC_FETCH_MODE</td><td style="vertical-align:top;">:</td><td><div>navigate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_SEC_FETCH_SITE</td><td style="vertical-align:top;">:</td><td><div>same-origin</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_SEC_FETCH_USER</td><td style="vertical-align:top;">:</td><td><div>?1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_FORWARDED_FOR</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REAL_IP</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/localfs/default/simple_grid/pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div>keywords=</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>10.0.0.52</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>38612</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_URI</td><td style="vertical-align:top;">:</td><td><div>/localfs/default/simple_grid/pessoa?keywords=</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/rogoberto/web2py/applications/welcome/&#x27;, &#x27;/home/rogoberto/web2py/applications/admin/&#x27;, &#x27;/home/rogoberto/web2py/applications/localfs/&#x27;, &#x27;/home/rogoberto/web2py/applications/aluminum/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_length</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_type</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">document_root</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>_ga=GA1.2.786035724.1591068301; session_id_admin=177.37.226.149-4a96232b-4953-494e-ac8d-4c5e96e92540; session_id_localfs=177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a; session_id_welcome=177.37.226.149-c127bdcb-050a-4e75-85a6-1b9e8823b984; session_id_aluminum=177.37.226.149-e91ec772-39e6-4a9d-b8e5-2a3f33c00140</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>https://rogoberto.pythonanywhere.com/localfs/default/simple_grid/pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_sec_fetch_dest</td><td style="vertical-align:top;">:</td><td><div>document</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_sec_fetch_mode</td><td style="vertical-align:top;">:</td><td><div>navigate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_sec_fetch_site</td><td style="vertical-align:top;">:</td><td><div>same-origin</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_sec_fetch_user</td><td style="vertical-align:top;">:</td><td><div>?1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_forwarded_for</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_real_ip</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">https</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>green-liveweb14</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/localfs/default/simple_grid/pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div>keywords=</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>10.0.0.52</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>38612</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/localfs/default/simple_grid/pessoa?keywords=</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.node</td><td style="vertical-align:top;">:</td><td><div>green-liveweb14</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_node</td><td style="vertical-align:top;">:</td><td><div>green-liveweb14</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.1-stable+timestamp.2018.08.06.01.02.56</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f840bb43d10&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f840cf53e28&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f840bb43d10&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f840cf53e28&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py/applications/localfs/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>simple_grid</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/rogoberto/web2py/applications/welcome/&#x27;, &#x27;/home/rogoberto/web2py/applications/admin/&#x27;, &#x27;/home/rogoberto/web2py/applications/localfs/&#x27;, &#x27;/home/rogoberto/web2py/applications/aluminum/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>rogoberto.pythonanywhere.com</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>green-liveweb14</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.1-stable+timestamp.2018.08.06.01.02.56</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2020, 6, 4, 7, 57, 22, 947728)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div>pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/localfs/default/simple_grid/pessoa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2020, 6, 4, 7, 57, 22, 947759)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f8408c748d0&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/rogoberto/web2py/gluon/restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0x7f8408e514b0, file "/...ications/localfs/controllers/default.py", line 8>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0x7f8408e514b0, file "/...ications/localfs/controllers/default.py", line 8>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/rogoberto/web2py/applications/localfs/controllers/default.py\', scode=<code object <module> at 0x7f8408e514b0, file "/...ications/localfs/controllers/default.py", line 8>)'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'/home/rogoberto/web2py/applications/localfs/controllers/default.py'
+p90
+sg66
+(dp91
+sg72
+I65
+sg73
+(dp92
+I54
+S'    return dict(form=auth())'
+p93
+sI55
+S''
+sI56
+S'# ---- action to server uploaded static content (required) ---'
+p94
+sI57
+S'@cache.action()'
+p95
+sI58
+S'def download():'
+p96
+sI59
+S'    """'
+p97
+sI60
+S'    allows downloading of uploaded files'
+p98
+sI61
+S'    http://..../[app]/default/download/[filename]'
+p99
+sI62
+S'    """'
+p100
+sI63
+S'    return response.download(request, db)'
+p101
+ssg85
+S'()'
+p102
+sg87
+S'<module>'
+p103
+sa(dp104
+g64
+S'/home/rogoberto/web2py/gluon/globals.py'
+p105
+sg66
+(dp106
+S'self'
+p107
+S'undefined'
+p108
+sS'f'
+S'<function simple_grid>'
+p109
+ssg72
+I421
+sg73
+(dp110
+I416
+S"        self.flash = ''            # used by the default view layout"
+p111
+sI417
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p112
+sI418
+S'        self.menu = []             # used by the default view layout'
+p113
+sI419
+S'        self.files = []            # used by web2py_ajax.html'
+p114
+sI420
+S'        self._vars = None'
+p115
+sI421
+S'        self._caller = lambda f: f()'
+p116
+sI422
+S'        self._view_environment = None'
+p117
+sI423
+S'        self._custom_commit = None'
+p118
+sI424
+S'        self._custom_rollback = None'
+p119
+sI425
+S"        self.generic_patterns = ['*']"
+p120
+ssg85
+S'(f=<function simple_grid>)'
+p121
+sg87
+S'<lambda>'
+p122
+sa(dp123
+g64
+S'/home/rogoberto/web2py/gluon/tools.py'
+p124
+sg66
+(dp125
+S'action'
+p126
+S'<function simple_grid>'
+p127
+sS'a'
+S'()'
+p128
+sS'b'
+g19
+ssg72
+I3862
+sg73
+(dp129
+I3857
+S'                    flag = condition'
+p130
+sI3858
+S'                if not flag:'
+p131
+sI3859
+S'                    current.session.flash = self.messages.access_denied'
+p132
+sI3860
+S'                    return call_or_redirect('
+p133
+sI3861
+S'                        self.settings.on_failed_authorization)'
+p134
+sI3862
+S'                return action(*a, **b)'
+p135
+sI3863
+S'            f.__doc__ = action.__doc__'
+p136
+sI3864
+S'            f.__name__ = action.__name__'
+p137
+sI3865
+S'            f.__dict__.update(action.__dict__)'
+p138
+sI3866
+S'            return f'
+p139
+ssg85
+S'(*a=(), **b={})'
+p140
+sg87
+S'f'
+sa(dp141
+g64
+S'/home/rogoberto/web2py/applications/localfs/controllers/default.py'
+p142
+sg66
+(dp143
+S'global grid'
+p144
+S'<function grid>'
+p145
+sS'builtinFalse'
+p146
+S'False'
+p147
+sS'].id'
+p148
+g108
+sS'SQLFORM.grid'
+p149
+S'<function grid>'
+p150
+sS'global SQLFORM'
+p151
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p152
+sS'create'
+p153
+g108
+sS'args'
+p154
+g108
+sS'tablename'
+p155
+S"'pessoa'"
+p156
+sS'deletable'
+p157
+g108
+sS'fields'
+p158
+g108
+sS'global db'
+p159
+S'<DAL uri="sqlite://storage.sqlite">'
+p160
+sS'editable'
+p161
+g108
+sS'csv'
+p162
+g108
+ssg72
+I30
+sg73
+(dp163
+I32
+S'# ---- Embedded wiki (example) ----'
+p164
+sI33
+S'def wiki():'
+p165
+sI34
+S'    auth.wikimenu() # add the wiki to the menu'
+p166
+sI25
+S'@auth.requires_login()'
+p167
+sI26
+S'def simple_grid():'
+p168
+sI27
+S"    response.view = 'generic.html' # use a generic view"
+p169
+sI28
+S'    tablename = request.args(0)'
+p170
+sI29
+S'    if not tablename in db.tables: raise HTTP(403)'
+p171
+sI30
+S'    grid = SQLFORM.grid(db[tablename], args=[tablename], fields = [not db[tablename].id],csv=False, create=False, deletable=False, editable=False)'
+p172
+sI31
+S'    return dict(grid=grid)'
+p173
+ssg85
+S'()'
+p174
+sg87
+S'simple_grid'
+p175
+sa(dp176
+g64
+S'/home/rogoberto/web2py/gluon/sqlhtml.py'
+p177
+sg66
+(dp178
+S'f.tablename'
+p179
+g108
+sS'f.listable'
+p180
+g108
+sS'f'
+g147
+sS'fields'
+p181
+S'[False]'
+p182
+sS'tablenames'
+p183
+S"{'pessoa': <Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>}"
+p184
+sS'columns'
+p185
+g108
+ssg72
+I2462
+sg73
+(dp186
+I2464
+S'            fields = []'
+p187
+sI2465
+S'            columns = []'
+p188
+sI2466
+S"            filter1 = lambda f: isinstance(f, Field) and (f.type!='blob' or showblobs)"
+p189
+sI2457
+S'            # add missing tablename to virtual fields'
+p190
+sI2458
+S'            for table in tables:'
+p191
+sI2459
+S'                for k, f in iteritems(table):'
+p192
+sI2460
+S'                    if isinstance(f, Field.Virtual):'
+p193
+sI2461
+S'                        f.tablename = table._tablename'
+p194
+sI2462
+S'            columns = [f for f in fields if f.tablename in tablenames and f.listable]'
+p195
+sI2463
+S'        else:'
+p196
+ssg85
+S"(query=<Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>, fields=[False], field_id=None, left=None, headers={}, orderby=None, groupby=None, searchable=True, sortable=True, paginate=20, deletable=False, editable=False, details=True, selectable=None, create=False, csv=False, links=None, links_in_grid=True, upload='<default>', args=['pessoa'], user_signature=True, maxtextlengths={}, maxtextlength=20, onvalidation=None, onfailure=None, oncreate=None, onupdate=None, ondelete=None, sorter_icons=(&#x25B2;, &#x25BC;), ui={'button': 'button btn btn-default btn-secondary', 'buttonadd': 'icon plus icon-plus glyphicon glyphicon-plus', 'buttonback': 'icon leftarrow icon-arrow-left glyphicon glyphicon-arrow-left', 'buttondelete': 'icon trash icon-trash glyphicon glyphicon-trash', 'buttonedit': 'icon pen icon-pencil glyphicon glyphicon-pencil', 'buttonexport': 'icon downarrow icon-download glyphicon glyphicon-download', 'buttontable': 'icon rightarrow icon-arrow-right glyphicon glyphicon-arrow-right', 'buttontext': 'buttontext button', 'buttonview': 'icon magnifier icon-zoom-in glyphicon glyphicon-zoom-in', 'content': '', ...}, showbuttontext=True, _class='web2py_grid', formname='web2py_grid', search_widget='default', advanced_search=True, ignore_rw=False, formstyle='bootstrap4_inline', exportclasses=None, formargs={}, createargs={}, editargs={}, viewargs={}, selectable_submit_button='Submit', buttons_placement='right', links_placement='right', noconfirm=False, cache_count=None, client_side_delete=False, ignore_common_filters=None, auto_pagination=True, use_cursor=False, represent_none=None, showblobs=False)"
+p197
+sg87
+S'grid'
+p198
+sasS'pyver'
+p199
+S'Python 2.7.12: /usr/local/bin/uwsgi (prefix: /usr)'
+p200
+sS'session'
+p201
+g59
+(S's]\x08\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>1dc5b445-5d57-4c79-9d4b-9b94ac0c4514</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2020, 6, 4, 7, 54, 34, 852293)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>usbetin@gmail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>teste</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>teste</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">1</td><td style="vertical-align:top;">:</td><td><div>user_1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr></table></div>'
+tRp202
+sS'etype'
+p203
+S"<type 'exceptions.AttributeError'>"
+p204
+sS'date'
+p205
+S'Thu Jun  4 07:57:23 2020'
+p206
+sS'response'
+p207
+g59
+(S'sB"\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f8408241e30&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_localfs</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Principal</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Cadastro</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Pessoa</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/pessoa/pre_cadastro</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Cliente</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/pessoa/cadastro_pessoa</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Imovel</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/imovel/cadastro_imovel</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Consulta</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Pessoa</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/default/index</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Cliente</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/default/index</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Imovel</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/localfs/default/index</div></td></tr><tr><td><div>[]</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/simple_grid/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_localfs</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/rogoberto/web2py/applications/localfs/sessions/1b3/1f5/177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a&#x27;, mode &#x27;rb+&#x27; at 0x7f8408be0f60&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/rogoberto/web2py/applications/localfs/sessions/177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>d26286ebf15aa8ae4548b4f01c647988</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>177.37.226.149-30e06fa2-bd69-4532-882b-170d0929b29a</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_localfs</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>localfs</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">show_toolbar</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>generic.html</div></td></tr></table></div>'
+tRp208
+sS'locals'
+p209
+(dp210
+S'editargs'
+p211
+g19
+sS'tablenames'
+p212
+S"{'pessoa': <Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>}"
+p213
+sS'links'
+p214
+S'None'
+p215
+sS'fetch_count'
+p216
+S'<function fetch_count>'
+p217
+sS'tablename'
+p218
+S"'pessoa'"
+p219
+sS'paginate'
+p220
+S'20'
+p221
+sS'advanced_search'
+p222
+S'True'
+p223
+sS'upload'
+p224
+S"'<default>'"
+p225
+sS'noconfirm'
+p226
+g147
+sS'keywords'
+p227
+S"''"
+p228
+sS'sorter_icons'
+p229
+S'(&#x25B2;, &#x25BC;)'
+p230
+sg201
+S"<Storage {'_formkey[register]': ['bec41dff-48a2-...gin]': ['5bdbd9d7-9339-4231-902e-fb615a5aa016']}>"
+p231
+sS'query'
+p232
+S'<Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>'
+p233
+sS'viewargs'
+p234
+g19
+sS'cache_count'
+p235
+S'None'
+p236
+sS'selectable_submit_button'
+p237
+S"'Submit'"
+p238
+sS'client_side_delete'
+p239
+g147
+sS'formstyle'
+p240
+S"'bootstrap4_inline'"
+p241
+sS'fix_orderby'
+p242
+S'<function fix_orderby>'
+p243
+sS'maxtextlength'
+p244
+S'20'
+p245
+sS'rows'
+p246
+S'None'
+p247
+sS'searchable'
+p248
+g223
+sS'createargs'
+p249
+g19
+sS'create'
+p250
+g147
+sS'logged'
+p251
+S"<Row {'registration_id': '', 'last_name': 'teste...stration_key': '', 'email': 'usbetin@gmail.com'}>"
+p252
+sS'formargs'
+p253
+g19
+sS'maxtextlengths'
+p254
+g19
+sS'ignore_rw'
+p255
+g147
+sS'showblobs'
+p256
+g147
+sS'details'
+p257
+g223
+sS'onvalidation'
+p258
+S'None'
+p259
+sS'url2'
+p260
+S'<function url2>'
+p261
+sS'editable'
+p262
+g147
+sS'user_signature'
+p263
+g223
+sS'_class'
+p264
+S"'web2py_grid'"
+p265
+sS'auto_pagination'
+p266
+g223
+sS'ondelete'
+p267
+S'None'
+p268
+sg44
+S"['pessoa']"
+p269
+sS'onfailure'
+p270
+S'None'
+p271
+sS'tables'
+p272
+S'[<Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>]'
+p273
+sS'use_cursor'
+p274
+g147
+sS'field_id'
+p275
+S'None'
+p276
+sS'represent_none'
+p277
+S'None'
+p278
+sS'db'
+p279
+S'<DAL uri="sqlite://storage.sqlite">'
+p280
+sS'deletable'
+p281
+g147
+sS'gridbutton'
+p282
+S'<function gridbutton>'
+p283
+sS'links_in_grid'
+p284
+g223
+sS'selectable'
+p285
+S'None'
+p286
+sS'table'
+p287
+S'<Table pessoa (id, empresa, tipo_pessoa, nome, cpf, rg, telefone)>'
+p288
+sg207
+S"<Storage {'body': <cStringIO.StringO object at 0...bda> at 0x7f8408471de8>, 'view': 'generic.html'}>"
+p289
+sS'formname'
+p290
+S"'web2py_grid'"
+p291
+sS'orderby'
+p292
+S'None'
+p293
+sS'dbset'
+p294
+S'<Set ("pessoa"."id" IS NOT NULL)>'
+p295
+sS'sortable'
+p296
+g223
+sS'left'
+p297
+S'None'
+p298
+sS'onupdate'
+p299
+S'None'
+p300
+sS'url'
+p301
+S'<function url>'
+p302
+sS'fields'
+p303
+S'[False]'
+p304
+sS'k'
+S"'tipo_pessoa'"
+p305
+sS'f'
+g147
+sg58
+S"<Storage {'function': 'simple_grid', 'cookies': ...e, 'is_https': True, 'client': '177.37.226.149'}>"
+p306
+sS'wenabled'
+p307
+g223
+sS'T'
+S'<gluon.languages.translator object>'
+p308
+sS'groupby'
+p309
+S'None'
+p310
+sS'headers'
+p311
+g19
+sS'buttons_placement'
+p312
+S"'right'"
+p313
+sS'ui'
+p314
+S"{'button': 'button btn btn-default btn-secondary', 'buttonadd': 'icon plus icon-plus glyphicon glyphicon-plus', 'buttonback': 'icon leftarrow icon-arrow-left glyphicon glyphicon-arrow-left', 'buttondelete': 'icon trash icon-trash glyphicon glyphicon-trash', 'buttonedit': 'icon pen icon-pencil glyphicon glyphicon-pencil', 'buttonexport': 'icon downarrow icon-download glyphicon glyphicon-download', 'buttontable': 'icon rightarrow icon-arrow-right glyphicon glyphicon-arrow-right', 'buttontext': 'buttontext button', 'buttonview': 'icon magnifier icon-zoom-in glyphicon glyphicon-zoom-in', 'content': '', ...}"
+p315
+sS'ignore_common_filters'
+p316
+S'None'
+p317
+sS'referrer'
+p318
+S"'/localfs/default/simple_grid/pessoa?keywords=&_signature=4439eda1ceab87141a0e3e45f8f7d6d5bc469a10'"
+p319
+sS'links_placement'
+p320
+S"'right'"
+p321
+sS'oncreate'
+p322
+S'None'
+p323
+sS'search_widget'
+p324
+S"'default'"
+p325
+sS'csv'
+p326
+g147
+sS'exportclasses'
+p327
+S'None'
+p328
+sS'showbuttontext'
+p329
+g223
+sssS'traceback'
+p330
+S'Traceback (most recent call last):\n  File "/home/rogoberto/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/rogoberto/web2py/applications/localfs/controllers/default.py", line 65, in <module>\n  File "/home/rogoberto/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/rogoberto/web2py/gluon/tools.py", line 3862, in f\n    return action(*a, **b)\n  File "/home/rogoberto/web2py/applications/localfs/controllers/default.py", line 30, in simple_grid\n    grid = SQLFORM.grid(db[tablename], args=[tablename], fields = [not db[tablename].id],csv=False, create=False, deletable=False, editable=False)\n  File "/home/rogoberto/web2py/gluon/sqlhtml.py", line 2462, in grid\n    columns = [f for f in fields if f.tablename in tablenames and f.listable]\nAttributeError: \'bool\' object has no attribute \'tablename\'\n'
+p331
+s.

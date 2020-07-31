@@ -1,0 +1,214 @@
+# -*- coding: utf-8 -*-
+import datetime
+@auth.requires_login()
+def cadastrar_contrato():
+    response.view = 'generic.html' # use a generic view
+    
+
+    db.contrato_aluguel.locador.default = 1
+    db.contrato_aluguel.avalista.default = 51
+    locatario=db(db.pessoa).select(orderby=~db.pessoa.id).first()
+    db.contrato_aluguel.locatario.default = locatario.id
+    form = SQLFORM(db.contrato_aluguel).process()
+    if form.accepted:
+        redirect(URL('todos_contratos'))
+    elif form.errors:
+        response.flash = 'Formulario não aceito'
+    #else:
+        #response.flash = 'Preencha o formulario'
+    return  dict(form=form)
+
+@auth.requires_login()
+def ver_contrato(): 
+    response.view = 'generic.html' # use a generic view
+    
+    db.contrato_aluguel.id.readable = False
+    db.contrato_aluguel.id.writable = False
+    
+    db.contrato_aluguel.imovel.readable = True
+    db.contrato_aluguel.imovel.writable = False
+    
+    db.contrato_aluguel.locador.readable = True
+    db.contrato_aluguel.locador.writable = False
+    
+    db.contrato_aluguel.locatario.readable = True
+    db.contrato_aluguel.locatario.writable = False
+    
+    db.contrato_aluguel.avalista.readable = True
+    db.contrato_aluguel.avalista.writable = False
+    
+    db.contrato_aluguel.tipo.readable = True
+    db.contrato_aluguel.tipo.writable = False
+    
+    
+    
+    db.contrato_aluguel.virgencia_meses.readable = False
+    db.contrato_aluguel.virgencia_meses.writable = False
+    
+    db.contrato_aluguel.data_inicial.readable = True
+    db.contrato_aluguel.data_inicial.writable = False
+    
+    db.contrato_aluguel.valor.readable = True
+    db.contrato_aluguel.valor.writable = False
+    
+    db.contrato_aluguel.valor_ext.readable = True
+    db.contrato_aluguel.valor_ext.writable = False
+    
+    db.contrato_aluguel.local_contrato.readable = True
+    db.contrato_aluguel.local_contrato.writable = False
+    
+    db.contrato_aluguel.data_contrato.readable = True
+    db.contrato_aluguel.data_contrato.writable = False
+    a=False
+    if request.args(1)=="True":
+        a=True
+    
+    form = SQLFORM(db.contrato_aluguel, request.args(0, cast=int), deletable=a)
+    if form.process().accepted:
+        session.flash = 'Atualizado'
+        redirect(URL('todos_contratos'))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+
+@auth.requires_login()
+def alterar_contrato(): 
+    response.view = 'generic.html' # use a generic view
+    
+    
+    contrato_aluguel=db.contrato_aluguel(request.args(0, cast=int))
+    db.contrato_aluguel.id.readable = False
+    db.contrato_aluguel.id.writable = False
+    
+    num=(db((db.recebimento.contrato_aluguel==contrato_aluguel.id)&(db.recebimento.quitado==True)).select())
+    deletar=True
+    if len(num)>0:
+        deletar=False
+    form = SQLFORM(db.contrato_aluguel, request.args(0, cast=int), deletable=deletar)
+    if form.process().accepted:
+        session.flash = 'Atualizado'
+        redirect(URL('todos_contratos'))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+
+def acessar_contrato():
+    contrato = db.contrato_aluguel(request.args(0, cast=int))
+    imovel = db.imovel(db.imovel.id==contrato.imovel)
+    locador = db.pessoa(db.pessoa.id==contrato.locador)
+    locatario = db.pessoa(db.pessoa.id==contrato.locatario)
+    avalista = db.pessoa(db.pessoa.id==contrato.avalista)
+    rows = db(db.recebimento.imovel == contrato.id).select()
+    return locals()
+
+def gerar_parcelas():
+    contrato = db.contrato_aluguel(request.args(0, cast=int))
+    recebimentos = db(db.recebimento.contrato_aluguel == contrato.id).select()
+    if len(recebimentos)>1:
+        db(db.recebimento.contrato_aluguel == contrato.id).delete()
+        redirect(URL('acessar_contrato',args=request.args(0, cast=int)))
+    if len(recebimentos)<1:
+        datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month, contrato.data_inicial.day)
+        if contrato.data_inicial.day>30:
+            contrato.data_inicial=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month, 30)
+        if contrato.data_inicial.month==1:
+            datafinal=datetime.date(contrato.data_inicial.year-1, 1, contrato.data_inicial.day)
+        elif contrato.data_inicial.month==3 and contrato.data_inicial.year>28:
+            datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month-1, 28)
+        elif contrato.data_inicial.month==12:
+            datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month-1, contrato.data_inicial.day)
+        else:
+            datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month-1, contrato.data_inicial.day)
+        row=0
+        dia=contrato.data_inicial.day
+        while (row<contrato.virgencia_meses):
+            if datafinal.month<12:
+                if datafinal.month==1 and datafinal.day>28:
+                    dia=datafinal.day
+                    datafinal=datetime.date(datafinal.year, datafinal.month+1, 28)
+                elif datafinal.day>30:
+                    dia=30
+                    datafinal=datetime.date(datafinal.year, datafinal.month+1, 30)
+                else:datafinal=datetime.date(datafinal.year, datafinal.month+1, dia)
+            else:
+                if datafinal.day>30:
+                    dia=30
+                    datafinal=datetime.date(datafinal.year, datafinal.month+1, 30)
+                else:datafinal=datetime.date(datafinal.year+1, 1, datafinal.day)
+            db.recebimento.insert( imovel=contrato.imovel, contrato_aluguel=contrato.id,  valor=contrato.valor, data_vencimento=datafinal, data_pagamento=datafinal)
+            row+=1
+        contrato.dia_vencimento=(datafinal.day)
+        contrato.data_final=datafinal
+        contrato.update_record()
+    return redirect(URL('acessar_contrato',args=request.args(0, cast=int)))
+
+def alterar_parcela():
+    response.view = 'generic.html' # use a generic view
+    
+    recebimento=db.recebimento(request.args(0, cast=int))
+    
+    db.recebimento.id.readable = False
+    db.recebimento.id.writable = False
+    db.recebimento.valor.readable = True
+    db.recebimento.valor.writable = True
+    db.recebimento.tipo_pagamento.readable = False
+    db.recebimento.tipo_pagamento.writable = False
+    if not recebimento.quitado:
+        recebimento.data_pagamento = request.now
+
+        recebimento.update_record()
+    form = SQLFORM(db.recebimento, request.args(0, cast=int), deletable=False)
+    if form.process().accepted:
+        redirect(URL('contrato','acessar_contrato',args=recebimento.contrato_aluguel))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    #2 consultas no banco
+    return  dict(form=form)
+
+def ver_parcela():
+    recebimento = db.recebimento(request.args(0, cast=int))
+    contrato=db.contrato_aluguel(recebimento.contrato_aluguel)
+    locador=db.pessoa(contrato.locador)
+    locatario=db.pessoa(contrato.locatario)
+    imovel=db.imovel(contrato.imovel)
+    return locals()
+
+def gerar_contrato():
+    contrato=db.contrato_aluguel(request.args(0, cast=int))
+    locador=db.pessoa(contrato.locador)
+    locatario=db.pessoa(contrato.locatario)
+    imovel=db.imovel(contrato.imovel)
+    return locals()
+
+@auth.requires_login()
+def todos_contratos():
+    usuario=auth.user
+    data_hoje=request.now
+    #response.view = 'generic.html' # use a generic view
+    rows = db(db.contrato_aluguel).select(orderby=~db.contrato_aluguel.id)
+    consul=(request.args(0))
+    if consul:
+        rows = db((db.contrato_aluguel.valor.contains(request.args(0)))).select(orderby=db.contrato_aluguel.imovel)
+    return locals()
+
+
+@auth.requires_login()
+def carne():
+    #response.view = 'generic.html' # use a generic view
+    contrato=db.contrato_aluguel(request.args(0, cast=int))
+    locador=db.pessoa(contrato.locador)
+    locatario=db.pessoa(contrato.locatario)
+    imovel=db.imovel(contrato.imovel)
+    rows = db(db.recebimento.contrato_aluguel==request.args(0, cast=int)).select(orderby=db.recebimento.data_vencimento)
+    return  locals()

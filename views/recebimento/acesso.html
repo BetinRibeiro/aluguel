@@ -1,0 +1,122 @@
+{{extend 'layout.html'}}
+{{from datetime import *}}
+{{import datetime}}
+{{if False:}}
+<p class="text-white">Data Busca - {{=databusca}} | Primeira data {{=primeira_data}}</p>
+{{pass}}
+<div class="py-1">
+       
+    
+      <div class="row">
+        <div class="col-md-12">
+            
+          <a class="text-danger" href="{{=URL('default', 'principal')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar ao Inicio</a>
+      <h5 class=""> 
+          <b>Relatório de Recebimentos</b> 
+          
+      </h5>
+             </div>
+          {{if False:}}
+        <div class="col-md-6" id="noprint">
+            <div class="form-group row">
+                <input type="text" class="form-control col-10 col-form-label" name="busca" placeholder="Faça uma pesquisa" id="noprint"/>
+              <div class="col-2">
+                  <a class=" botao" id="noprint">
+                      <i class="fa text-success fa-search  fa-2x"></i>
+                  </a>
+                </div>
+            </div>
+      </div>
+    {{pass}}
+    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Data</th>
+                  <th>Imovel</th>
+                  <th>Locatario</th>
+                  <th>Fone</th>
+                  <th>Valor</th>
+                  <th class="text-center" id="noprint">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  {{if (row.quitado)and (primeira_data>row.data_vencimento):}}
+                  {{else:}}
+                  {{a+=1}}
+                  
+                  {{if (not row.quitado) and (data.date()>row.data_vencimento):}}
+                  
+                <tr class="table-danger" >
+                    {{else:}}
+                    <tr>
+                    {{pass}}
+                    <th>{{=a}}</th>
+                    <th>{{=("{}/{}/{}".format(row.data_vencimento.day,row.data_vencimento.month,row.data_vencimento.year))}}</th>
+                  <td nowrap="true">{{=row.imovel.subtipo}}/{{=row.imovel.lougradouro}} {{=row.imovel.numero}}</td>
+                  <td nowrap="true">{{=row.contrato_aluguel.locatario.nome}}</td>
+                  <th nowrap="true" max-width="15ch">{{=(row.contrato_aluguel.locatario.telefone)[0:15]}}</th>
+                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor,2)).replace(",",".")}}0</th>
+
+                    {{if not row.quitado:}}
+                        {{if data.date()>row.data_vencimento:}}
+                        <td nowrap="true" class="text-center" id="noprint">
+                            <a href="{{=URL('ver_recibo', args=row.id)}}">
+                                <i class="fa fa-fw fa-1x py-1 fa-clone  text-primary"></i>
+                            </a>
+                            |
+                            <a href="{{=URL('alterar_quitar', args=row.id)}}">
+                                <i class="fa fa-fw fa-1x py-1 fa-check-square-o  text-danger"></i>
+                            </a>
+                        </td>
+                        {{else:}}
+                        <td nowrap="true" class="text-center" id="noprint">
+                            <a href="{{=URL('ver_recibo', args=row.id)}}">
+                                <i class="fa fa-fw fa-1x py-1 fa-clone  text-primary"></i>
+                            </a>
+                            |
+                            <a href="{{=URL('alterar_quitar', args=row.id)}}">
+                                <i class="fa fa-fw fa-1x py-1 fa-check-square-o  text-warning "></i>
+                            </a>
+                        </td>
+                        {{pass}}
+                    {{else:}}
+                    
+                        <td nowrap="true" class="text-center" id="noprint">
+                        <a href="{{=URL('ver_recibo', args=row.id)}}">
+                            <i class="fa fa-fw fa-1x py-1 fa-clone  text-primary"></i>
+                        </a>
+                            |
+                        <a href="{{=URL('alterar_quitar', args=[row.id,'quitado'])}}">
+                            <i class="fa fa-fw fa-1x py-1 fa-check-square-o  text-success"></i>
+                        </a>
+                        </td>
+                </tr>
+                    {{pass}}
+                    {{pass}}
+                    {{pass}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+    var inputElement = document.querySelector('input[name=busca]');
+    var btnElement = document.querySelector('a.botao');
+
+    btnElement.onclick = function(){
+     var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+
+    }
+
+</script>

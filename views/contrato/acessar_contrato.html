@@ -1,0 +1,252 @@
+{{extend 'layout.html'}}
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<style type="text/css">
+    body {
+        font-size: 14px;
+    }
+    #bd {
+        font-size: 18px;
+    }
+</style>
+  <div class="py-1" >
+    <div class="container" style="font-family: Roboto" >
+        <ul class="nav" id="noprint">
+            <li class="nav-item"  style="margin-right: 15px;">
+                <a class="text-danger" href="{{=URL('todos_contratos')}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>
+                    Voltar
+                </a>
+            </li>
+            {{if len(rows)>=int(contrato.virgencia_meses):}}
+            <li class="nav-item"  style="margin-right: 15px;">
+                <a class="text-warning" href="{{=URL('ver_contrato', args=[contrato.id,False])}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-file-text-o text-warning"></i>
+                    Ver Informações
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right: 15px;">
+                <a class="text-dark" href="{{=URL('gerar_contrato',args=contrato.id)}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-wpforms text-dark"></i>
+                    Gerar Documento
+                </a>
+            </li>
+            {{elif len(rows)==0:}}
+            <li class="nav-item"  style="margin-right: 15px;">
+                <a class="text-warning" href="{{=URL('ver_contrato', args=[contrato.id,True])}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-file-text-o text-warning"></i>
+                    Ver ou Excluir
+                </a>
+            </li>
+            {{pass}}
+        </ul>
+        <div class="row">
+            <br>
+            <h5>Informação do Contrato de Locação {{=contrato.tipo}}</h5>
+            <div class="col-md-12">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="table-responsive table-sm">
+                        <table class="table" >
+                            <tbody>
+                                <tr>
+                                    <th>Locador</th>
+                                    <th>{{=locador.nome}}</th>
+                                </tr>
+                                <tr>
+                                {{if locador.tipo_pessoa=="FÍSICA":}}
+                                    <td>CPF</td>
+                                    <td>{{=locador.cpf}}</td>
+                                {{else:}}
+                                    <td>CNPJ</td>
+                                    <td>{{=locador.cpf}}</td>
+                                {{pass}}
+                                </tr>
+                                <tr>
+                                    <td>Telefone</td>
+                                    <td>{{=locador.telefone}}
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive table-sm">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>{{=imovel.subtipo}} / {{=imovel.tipo}}</th>
+                                </tr>
+                                <tr>
+                                    <td>End.</td>
+                                    <td>{{=imovel.lougradouro}} NÚMERO {{=imovel.numero}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Bairro</td>
+                                    <td>BAIRRO {{=imovel.bairro}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Complemento</td>
+                                    <td>{{=imovel.complemento}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Cidade</td>
+                                    <td>{{=imovel.cidade}} {{=imovel.uf}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-responsive table-sm">
+                        <table class="table" >
+                            <tbody>
+                                <tr>
+                                    <th>Locatário</th>
+                                    <th>{{=locatario.nome}}</th>
+                                </tr>
+                                <tr>
+                                {{if locatario.tipo_pessoa=="FÍSICA":}}
+                                    <td>CPF</td>
+                                    <td>{{=locatario.cpf}}</td>
+                                {{else:}}
+                                    <td>CNPJ</td>
+                                    <td>{{=locatario.cpf}}</td>
+                                {{pass}}
+                                </tr>
+                                <tr>
+                                    <td>Telefone</td>
+                                    <td>{{=locatario.telefone}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{if avalista.id!=51:}}
+                    <div class="table-responsive table-sm">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Avalista</th>
+                                    <th>{{=avalista.nome}} </th>
+                                </tr>
+                                <tr>
+                                    <td>Cpf</td>
+                                    <td>{{=avalista.cpf}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Fone</td>
+                                    <td>{{=avalista.telefone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>End.</td>
+                                    <td>{{=avalista.lougradouro}} NÚMERO {{=avalista.numero}} BAIRRO {{=avalista.bairro}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Cidade</td>
+                                    <td>{{=avalista.cidade}} {{=avalista.uf}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{pass}}
+                </div>
+          </div>
+          <hr>
+          <div class="row">
+            <ul class="nav" id="noprint">
+            {{if not len(rows)>6:}}
+                <li class="nav-item"  style="margin-right: 15px;"> 
+                    <a class="text-dark" href="{{=URL('contrato', 'gerar_parcelas',args=contrato.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-list text-dark"></i>
+                        Gerar Parcelas
+                    </a>
+                </li>
+            {{pass}}
+                
+            {{if len(rows)>=5000:}}
+                <p>
+                    "if" Só para não aparecer nada mesmo 
+                </p>
+                <li class="nav-item"  style="margin-right: 15px;"> 
+                    <a class="text-primary" href="#">
+                        <i class="fa fa-fw fa-1x py-1 fa-plus-square  text-primary"></i>
+                        Adicionar Parcela
+                    </a>
+                </li>
+            {{pass}}
+            {{if len(rows)>0:}}
+                <li class="nav-item" style="margin-right: 15px;"> 
+                    <a class="text-success" href="{{=URL('contrato', 'carne',args=contrato.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-list-ul text-success"></i>
+                        Gerar Todos Recibos
+                    </a>
+                </li>
+            {{pass}}
+            </ul>
+              
+            <div class="col-md-12">
+                <p class="">Informes de pagamanto</p>
+                <div class="table-responsive bd" id="bd">
+            <table class="table table-sm table-striped table-borderless table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Vencimento</th>
+                                <th>Valor</th>
+                                <th class="text-center">Recebido</th>
+                                <th class="text-center">Recebimento</th>
+                                <th class="text-center" id="noprint">Ver</th>
+                                <th class="text-center" id="noprint">Alterar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {{a=1}}
+                        {{for row in rows:}}
+                            <tr>
+                                <th>{{=a}}ª</th>
+                                {{a+=1}}
+                                <th>{{=("{}/{}/{}".format(row.data_vencimento.day,row.data_vencimento.month,row.data_vencimento.year))}}</th>
+                                <td>R$ {{="{:,}".format(round(row.valor,1)).replace(",",".")}}0</td>
+                            {{if row.quitado:}}
+                                <td class="text-center" >R$ {{="{:,}".format(round(row.valor+row.juros,1)).replace(",",".")}}0</td>
+                                <th class="text-center" >{{=("{}/{}/{}".format(row.data_pagamento.day,row.data_pagamento.month,row.data_pagamento.year))}}</th>
+                            {{else:}}
+                                <td class="text-center" >R$ 0.00</td>
+                                {{dataatual=request.now}}
+                                {{import datetime}}
+                                    {{if row.data_vencimento>dataatual.date():}}
+                                <th class="text-center" >à vencer</th>
+                                    {{else:}}
+                                <th class="text-center" >Pendente</th>
+                                    {{pass}}
+                            {{pass}}
+                            <td class="text-center" id="noprint">
+                                <a id="noprint" href="{{=URL('contrato', 'ver_parcela',args=row.id)}}">
+                                    <i class="fa fa-fw fa-1x py-1 fa-clone text-success"></i>
+                                </a>
+                            </td>
+                            <td class="text-center" id="noprint">
+                                <a id="noprint" href="{{=URL('contrato', 'alterar_parcela',args=row.id)}}">
+                                    <i class="fa fa-fw fa-1x py-1 fa-clone text-warning"></i>
+                                </a>
+                            </td>
+                            </tr>
+                            
+                        {{pass}}
+                            {{if len(rows)>0:}}
+                            {{if rows.last().quitado=="True":}}
+                            {{contrato.finalizado=True}}
+                            {{contrato.update_record()}}
+                            {{else:}}
+                            {{contrato.finalizado=False}}
+                            {{contrato.update_record()}}
+                            {{pass}}
+                            {{pass}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

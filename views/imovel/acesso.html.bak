@@ -1,0 +1,93 @@
+{{extend 'layout.html'}}
+
+
+<div class="py-1">
+    
+    <div class="container">
+        <marquee direction="left"><h5></h5></marquee>
+      <div class="row">
+        <div class="col-md-6" >
+            <a class="text-danger" href="{{=URL('default', 'principal')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar ao Inicio</a>
+            <a class="text-primary" href="{{=URL('imovel', 'cadastro_imovel')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-plus-square text-primary"></i>Cadastrar Novo Imóvel
+          </a>
+             <a class="text-success" href="{{=URL('acesso', args='disponiveis')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 text-success fa-search"></i>Imovéis Disponiveis
+          </a>
+      <h5 class="">
+          <b>Relatório de Imóveis</b>
+      </h5>
+             </div>
+        <div class="col-md-6" id="noprint">
+            <div class="form-group row">
+                <input type="text" class="form-control col-10 col-form-label" name="busca" placeholder="Faça uma pesquisa"  id="input" />
+              <div class="col-2">
+                 <a class=" botao">
+                      <i class="fa text-success fa-search  fa-2x"></i>
+                  </a>
+                </div>
+            </div>
+      </div></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Bairro</th>
+                  <th>Lougradouro</th>
+                  <th>Classificação</th>
+                  <th class="text-center" id="noprint">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  {{a+=1}}
+                  {{if not row.disponivel:}}
+                <tr class="table-danger" >
+                    {{else:}}
+                <tr>
+                    
+                    {{pass}}
+                    <th>10{{=row.id}}{{if not len(str(row.id))>1:}}0{{pass}}</th>
+                  <td nowrap="true">{{=row.bairro}}/{{=row.cidade}}</td>
+                  <td nowrap="true">{{=row.lougradouro}}/{{=row.numero}}</td>
+                  <th nowrap="true">{{=row.subtipo}}/{{=row.tipo}}</th>
+                  <td  nowrap="true" class="text-center" id="noprint">
+                      <a href="{{=URL('acesso_imovel', args=row.id)}}"><i class="fa fa-fw fa-1x py-1 fa-archive"></i></a>
+                    <i class="fa fa-fw fa-1x py-1 fa-book"></i>
+                    <i class="fa fa-fw fa-1x py-1 fa-calendar "></i>
+                      <a href="{{=URL('alterar_imovel', args=row.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-file text-warning"></i>
+                      </a>
+                  </td>
+                    {{pass}}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    var inputElement = document.querySelector('input[name=busca]');
+    var btnElement = document.querySelector('a.botao');
+
+    btnElement.onclick = function(){
+     var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+
+    }
+    $('#input').keydown(function(e){
+    if (e.which == 13){
+       var busca= inputElement.value;
+        window.location.href = "{{=URL('acesso')}}"+"/"+busca
+    }
+    })
+
+</script>

@@ -1,0 +1,169 @@
+{{extend 'layout.html'}}
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      font-size: 20px;
+    }
+  </style>
+  <a id="noprint" class="text-danger" href="{{=URL('recebimento_periodo', args=contrato.id)}}"><i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar</a>
+  {{a=1}}
+  {{while not a>2:}}
+  {{a+=1}}
+  <div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 border" style="font-family: Roboto">
+          <br>
+            <center>
+          <h4>RECIBO DE ALUGUEL {{=contrato.tipo}}</h4>
+                </center>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-responsive table-sm">
+                {{if locador.tipo_pessoa=="FÍSICA":}}
+                {{else:}}
+                {{pass}}
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td><B>Locador</B></td>
+                      <td><B>{{=locador.nome}}</B></td>
+                    </tr>
+                    <tr>
+                        {{if locador.tipo_pessoa=="FÍSICA":}}
+                      <td>CPF</td>
+                      <td>{{=locador.cpf}}</td>
+                        {{else:}}
+                      <td>CNPJ</td>
+                      <td>{{=locador.cpf}}</td>
+                        {{pass}}
+                    </tr>
+                    <tr>
+                      <td>Telefone</td>
+                      <td>{{=locador.telefone}}</td>
+                    </tr>
+                    <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              
+              <div class="table-responsive table-sm">
+                {{if locatario.tipo_pessoa=="FÍSICA":}}
+                {{else:}}
+                {{pass}}
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td><b>Locatário</b></td>
+                      <td><b>{{=locatario.nome}}</b></td>
+                    </tr>
+                    <tr>
+                        
+                      <td>CPF/CNPJ</td>
+                      <td>{{=locatario.cpf}}</td>
+                       
+                    </tr>
+                    <tr>
+                      <td>Endereço do Imóvel</td>
+                      <td>{{=imovel.lougradouro}} NÚMERO {{=imovel.numero}} BAIRRO {{=imovel.bairro}}</td>
+                    </tr>
+                    <tr>
+                      <td>Cidade</td>
+                      <td>{{=imovel.cidade}} {{=imovel.uf}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                <p><B>LOCADOR RECEBE A QUANTIA DE - R$ {{="{:,}".format(round(recebimento.valor,1)).replace(",",".")}}0 ({{=contrato.valor_ext}}) DO LOCATÁRIO</B></p>
+              <hr>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="table-responsive table-sm">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Data</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Aluguel referente</th>
+                          <td>{{=("{}/{}".format(recebimento.data_vencimento.day,recebimento.data_vencimento.month))}} à {{ano=recebimento.data_vencimento.year}}
+                            {{mes=recebimento.data_vencimento.month}}
+                            {{if recebimento.data_vencimento.month>=12:}}
+                            {{mes=1}}
+                            {{ano+=1}}
+                            {{else:}}
+                            {{mes+=+1}}
+                            {{pass}}
+                            {{=("{}/{}/{}".format(recebimento.data_vencimento.day,mes,ano))}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Data do vencimento</th>
+                          <td>{{=("{}/{}/{}".format(recebimento.data_vencimento.day,recebimento.data_vencimento.month,recebimento.data_vencimento.year))}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Término do Contrato</th>
+                          <td>{{=("{}/{}/{}".format(contrato.data_final.day,contrato.data_final.month,contrato.data_final.year))}}</td>
+                        </tr>
+                        <tr></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                  
+                <div class="col-md-7">
+                  <div class="col-md-12">
+                    <div class="table-responsive table-sm">
+                      {{total=recebimento.valor+recebimento.juros}}
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Aluguel</td>
+                            <td>R$ {{="{:,}".format(round(recebimento.valor,1)).replace(",",".")}}0</td>
+                          </tr>
+                          <tr>
+                              {{if recebimento.juros>=0:}}
+                            <td>Juros</td>
+                            <td >R$ {{="{:,}".format(round(recebimento.juros,1)).replace(",",".")}}0</td>
+                              {{else:}}
+                              
+                            <td>Desconto</td>
+                            <td >R$ {{="{:,}".format(round(recebimento.juros,1)).replace(",",".")}}0</td>
+                              {{pass}}
+                          </tr>
+                          <tr>
+                            <td>Líquido</td>
+                            <td>R$ {{="{:,}".format(round(total,1)).replace(",",".")}}0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <br>
+                  <center>
+                    <div class="blockquote">
+                      <p class="mb-0">___________________________________</p>
+                      <div class="blockquote-footer">Assinatura do Locador</div>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{pass}}

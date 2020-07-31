@@ -1,0 +1,163 @@
+{{extend 'layout.html'}}
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<style type="text/css">
+            body {
+                font-size: 20px;
+            }
+        </style>
+<a id="noprint" class="text-danger" href="{{=URL('acessar_contrato', args=contrato.id)}}"><i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar</a>
+
+{{a=1}}
+<div style="page-break-after: always;">
+    {{for row in rows:}}
+<div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 border" style="font-family: Roboto" >
+            <br>
+          <h5>Recibo de Aluguel {{=contrato.tipo}} / {{=a}} de {{=contrato.virgencia_meses}}</h5>
+            {{a+=1}}
+          <div class="row">
+
+                    <div class="table-responsive table-sm">
+                <table class="table">
+
+                  <tbody>
+                    <tr>
+                      <td>Locador</td>
+                      <td>{{=locador.nome}}</td>
+                    </tr>
+                    <tr>
+                        {{if locador.tipo_pessoa=="FÍSICA":}}
+                      <td>CPF</td>
+                      <td>{{=locador.cpf}}</td>
+                        {{else:}}
+                      <td>CNPJ</td>
+                      <td>{{=locador.cpf}}</td>
+                        {{pass}}
+                    </tr>
+                    <tr>
+                      <td>Telefone</td>
+                      <td>{{=locador.telefone}}</td>
+                    </tr>
+                    <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>A QUANTIA DE {{=contrato.valor_ext}}</p>
+              <div class="table-responsive table-sm">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Locatário</td>
+                      <td>{{=locatario.nome}}</td>
+                    </tr>
+                     <tr>
+                        {{if locatario.tipo_pessoa=="FÍSICA":}}
+                      <td>CPF</td>
+                      <td>{{=locatario.cpf}}</td>
+                        {{else:}}
+                      <td>CNPJ</td>
+                      <td>{{=locatario.cpf}}</td>
+
+                        {{pass}}
+                    </tr>
+                    <tr>
+                      <td>Endereço do Imóvel</td>
+                      <td>{{=imovel.lougradouro}} NÚMERO {{=imovel.numero}} BAIRRO {{=imovel.bairro}}</td>
+                    </tr>
+                      <tr>
+                      <td>Cidade</td>
+                      <td>{{=imovel.cidade}} {{=imovel.uf}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                <hr>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="table-responsive table-sm">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Data</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Aluguel referente</th>
+                          <td>{{=("{}/{}".format(row.data_vencimento.day,row.data_vencimento.month))}} à
+                              {{ano=row.data_vencimento.year}}
+                              {{mes=row.data_vencimento.month}}
+                              {{if row.data_vencimento.month>=12:}}
+                                  {{mes=1}}
+                                  {{ano+=1}}
+                              {{else:}}
+                                  {{mes+=+1}}
+                              {{pass}}
+                              {{=("{}/{}/{}".format(row.data_vencimento.day,mes,ano))}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Data do vencimento</th>
+                          <td>{{=("{}/{}/{}".format(row.data_vencimento.day,row.data_vencimento.month,row.data_vencimento.year))}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Término do Contrato</th>
+                          <td>{{=("{}/{}/{}".format(contrato.data_final.day,contrato.data_final.month,contrato.data_final.year))}}</td>
+                        </tr>
+                        <tr></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-md-7">
+              <div class="table-responsive table-sm">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Aluguel</td>
+                      <td>R$ {{="{:,}".format(round(row.valor,1)).replace(",",".")}}0</td>
+                    </tr>
+                    <tr>
+                      <td>Juros</td>
+                      <td>R$ {{="{:,}".format(round(row.juros,1)).replace(",",".")}}0</td>
+                    </tr>
+                      {{total=row.valor+row.juros}}
+                    <tr>
+                      <td>Líquido</td>
+                      <td>R$ {{="{:,}".format(round(total,1)).replace(",",".")}}0</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+            </div>
+                   <center>
+                      <div class="blockquote">
+                            <p class="mb-0">___________________________________</p>
+                            <div class="blockquote-footer">Assinatura do Locatario</div>
+                      </div>
+                   </center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{if (a/2)==0:}}
+  </div>
+<br>
+    <div style="page-break-after: always;">
+{{pass}}
+{{pass}}

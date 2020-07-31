@@ -1,0 +1,92 @@
+{{extend 'layout.html'}}
+{{from datetime import *}}
+{{import datetime}}
+{{data=request.now}}
+<hr>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <h6><i class="fa fa-hashtag fa-1x"></i>
+             Locação Imobiliaria</h6>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar10">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-brand text-light" href="#"><h6>
+                        Imoveis e Locação</h6></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="py-3" >
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"> Pessoas</div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-user-o text-primary  mr-2"></i>
+                                <a  href="{{=URL('pessoa', 'cadastro_pessoa')}}">Cadastro Pessoa</a>
+                            </li>
+                            <li class="list-group-item"><i class="fa fa-bars  text-primary  mr-2"></i>
+                                <a  href="{{=URL('pessoa', 'acesso')}}">Lista Pessoas</a>
+                            </li>
+                            <li class="list-group-item"><i class="fa fa-barcode   text-primary mr-2"></i>
+                               <a href="{{=URL('#')}}">Lista Despesas</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <br>
+            </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="">Imóveis</div>
+                    <div class="card-body">
+                         <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-home text-primary mr-2"></i>
+                                <a  href="{{=URL('imovel', 'cadastro_imovel')}}">Cadastro Imóveis</a>
+                            </li>
+                            <li class="list-group-item"><i class="fa fa-list-alt text-primary  mr-2"></i>
+                                <a  href="{{=URL('imovel', 'acesso')}}">Lista de Imóveis</a>
+                            </li>
+
+                            <li class="list-group-item"><i class="fa fa-list   text-primary mr-2"></i>
+                                <a  href="{{=URL('recebimento', 'recebimento_periodo', args=[data.month,data.year])}}">Recebimentos Periodo</a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <br>
+            </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"> Contratos</div>
+                    <div class="card-body">
+                         <ul class="list-group list-group-flush ">
+                            <li class="list-group-item"><i class="fa fa-file-text-o text-primary mr-2"></i>
+                                <a  href="{{=URL('contrato', 'cadastrar_contrato')}}">Novo Contrato</a>
+                            </li>
+                            <li class="list-group-item"><i class="fa fa-database text-primary mr-2"></i>
+                                <a  href="{{=URL('contrato', 'todos_contratos')}}">Lista de Contratos</a>
+                              <li class="list-group-item"><i class="fa fa-barcode   text-primary mr-2"></i>
+                               <a href="{{=URL('#')}}">Outra Opção</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+    </div>
+</div>

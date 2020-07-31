@@ -1,0 +1,124 @@
+{{extend 'layout.html'}}
+
+  <div class="py-1" >
+
+    <div class="container" style="font-family: Roboto" >
+        <ul class="nav" id="noprint">
+            <li class="nav-item"  style="margin-right: 15px;">
+                <a class="text-danger" href="{{=URL('acesso')}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>
+                    Voltar
+                </a>
+            </li>
+            
+        </ul>
+    <div class="row">
+                <div class="col-md-12">
+                    <h1>Informações do Imovel</h1>
+<div class="table-responsive table-sm">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>{{=imovel.subtipo}} / {{=imovel.tipo}}</th>
+                                </tr>
+                                <tr>
+                                    <td>End.</td>
+                                    <td>{{=imovel.lougradouro}} NÚMERO {{=imovel.numero}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Bairro</td>
+                                    <td>BAIRRO {{=imovel.bairro}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Complemento</td>
+                                    <td>{{=imovel.complemento}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Cidade</td>
+                                    <td>{{=imovel.cidade}} {{=imovel.uf}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+<div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="">Contratos</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-borderless table-hover table-sm table-striped">
+              <thead>
+                <tr>
+                  <th>Meses</th>
+                  <th>Locatario</th>
+                  <th>Valor</th>
+                  <th>Acessar</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{for r in rowscont:}}
+                <tr>
+                  <td>{{=("{}/{}".format(r.data_inicial.month,r.data_inicial.year))}} à {{=("{}/{}".format(r.data_final.month,r.data_final.year))}}</td>
+                  <td>{{=r.locatario.nome}}</td>
+                  <td>R$ {{="{:,}".format(round(r.valor,1)).replace(",",".")}}0</td>
+                  <td><a href="{{=URL('acessar_contrato', args=r.id)}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-book"></i>
+                      </a></td>
+                </tr>
+                  {{pass}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5 class="">Despesas</h5>
+            <a class="text-primary" href="{{=URL('cadastrar_despesa', args=imovel.id)}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-plus-square"></i> Cadastrar Despesa
+          </a>
+          <div class="table-responsive">
+            <table class="table table-bordered table-borderless table-hover table-sm table-striped">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>Alterar</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{total=0}}
+                  {{for d in rowsdesp:}}
+                  {{total+=d.valor}}
+
+                <tr>
+                  <td>{{=("{}/{}/{}".format(d.data_pagamento.day,d.data_pagamento.month,d.data_pagamento.year))}}</td>
+                  <td>{{=d.descricao}}</td>
+                  <td>R$ {{="{:,}".format(round(d.valor,1)).replace(",",".")}}0</td>
+                  <td> <a href="{{=URL('alterar_despesa', args=d.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-file text-warning"></i>
+                      </a></td>
+                </tr>
+                  {{pass}}
+                <tr>
+                  <th>#</th>
+                  <th>#</th>
+                  <th>R$ {{="{:,}".format(round(total,1)).replace(",",".")}}0</th>
+                  <th>#</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

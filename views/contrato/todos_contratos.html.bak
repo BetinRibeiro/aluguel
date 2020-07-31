@@ -1,0 +1,104 @@
+{{extend 'layout.html'}}
+{{import datetime}}
+{{data_hoje=datetime.date( data_hoje.year, data_hoje.month, data_hoje.day)}}
+<div class="py-1">
+    <div class="container">
+        
+      <div class="row">
+        <div class="col-md-6">
+            <a class="text-danger" href="{{=URL('default', 'principal')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar ao Inicio</a>
+            <a class="text-primary" href="{{=URL('cadastrar_contrato')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-plus-square"></i> Criar Contrato Novo
+          </a>
+      <h5 class="">
+          <b>Relatório de Contratos</b>
+      </h5>
+             </div>
+        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive table-sm" >
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                  <th>Imovel</th>
+                  <th>Locatario</th>
+                  <th>Valor</th>
+                  <th>Datas</th>
+                  <th class="text-center" id="noprint">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  
+                  {{a+=1}}
+                  {{if row.data_final>data_hoje:}}
+                <tr>
+                    {{else:}}
+                    <tr class="table-danger" >
+                    {{pass}}
+                    <th>{{=a}}</th>
+                  <td nowrap="true">{{=row.imovel.lougradouro}}</td>
+                  <td nowrap="true">{{=row.locatario.nome}}</td>
+                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor,1)).replace(",",".")}}0</th>
+                    {{if row.data_inicial.year!=row.data_final.year:}}
+                  <th nowrap="true">{{=("{}/{}".format(row.data_inicial.month,row.data_inicial.year))}} à {{=("{}/{}".format(row.data_final.month,row.data_final.year))}}</th>
+                    
+                  <td  nowrap="true" class="text-center" id="noprint">
+                      
+                    <i class="fa fa-fw fa-1x py-1 fa-archive"></i>
+                      <a href="{{=URL('acessar_contrato', args=row.id)}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-book"></i>
+                      </a>
+                      <a href="{{=URL('gerar_contrato', args=row.id)}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-file-pdf-o text-danger"></i>
+                      </a>
+                      <a href="{{=URL('alterar_contrato', args=row.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-file text-warning"></i>
+                      </a>
+                  </td>
+                    {{else:}}
+                    <th id="noprint">Gerar Recebimetos--></th>
+                    <td class="text-center" id="noprint">
+                    {{if not usuario.id==1424:}}
+                        <a href="{{=URL('contrato', 'gerar_parcelas',args=row.id)}}">
+                    <i class="fa fa-fw fa-1x py-1 fa-share-square-o"></i>
+                      </a>
+                        {{pass}}
+                    <a href="{{=URL('alterar_contrato', args=row.id)}}">
+                        <i class="fa fa-fw fa-1x py-1 fa-sticky-note  text-warning"></i>
+                      </a>
+                        
+                        
+                    </td>
+                    {{pass}}
+                    
+                    {{pass}}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    var inputElement = document.querySelector('input[name=busca]');
+    var btnElement = document.querySelector('a.botao');
+
+    btnElement.onclick = function(){
+     var busca= inputElement.value;
+        window.location.href = "{{=URL('todos_contratos')}}"+"/"+busca
+
+    }
+ $('#input').keydown(function(e){
+    if (e.which == 13){
+       var busca= inputElement.value;
+        window.location.href = "{{=URL('todos_contratos')}}"+"/"+busca
+    }
+    })
+</script>
