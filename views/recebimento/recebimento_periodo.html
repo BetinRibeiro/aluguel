@@ -114,11 +114,12 @@
                   <td nowrap="true">{{=(row.contrato_aluguel.locatario.nome)[0:15]}}</td>
                     {{if row.quitado:}}
                   <th nowrap="true" max-width="15ch">Quitado</th>
+                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor+row.juros,2)).replace(",",".")}}0</th>
                     
                     {{else:}}
                   <th nowrap="true" max-width="15ch">{{=(row.contrato_aluguel.locatario.telefone)[0:15]}}</th>
-                    {{pass}}
                   <th nowrap="true">R$ {{="{:,}".format(round(row.valor,2)).replace(",",".")}}0</th>
+                    {{pass}}
 
                   
                     

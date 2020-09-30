@@ -53,6 +53,8 @@
 'Config.ini': 'Config.ini',
 'Consulta': 'Consulta',
 'Content': 'Conteudo',
+'Contrato': 'Contrato',
+'Contratos': 'Contratos',
 'Contratos novos': 'Contratos novos',
 'Contratos vencidos': 'Contratos vencidos',
 'Controller': 'Controlador',

@@ -1,0 +1,139 @@
+{{extend 'layout.html'}}
+{{from datetime import *}}
+{{import datetime}}
+
+{{mes="Janeiro"}}
+{{if primeira_data.month==2:}}
+{{mes="Fevereiro"}}
+
+{{elif primeira_data.month==3:}}
+{{mes="Março"}}
+
+{{elif primeira_data.month==4:}}
+{{mes="Abril"}}
+
+{{elif primeira_data.month==5:}}
+{{mes="Maio"}}
+
+{{elif primeira_data.month==6:}}
+{{mes="Junho"}}
+
+{{elif primeira_data.month==7:}}
+{{mes="Julho"}}
+
+{{elif primeira_data.month==8:}}
+{{mes="Agosto"}}
+
+{{elif primeira_data.month==9:}}
+{{mes="Setembro"}}
+
+{{elif primeira_data.month==10:}}
+{{mes="Outubro"}}
+
+{{elif primeira_data.month==11:}}
+{{mes="Novembro"}}
+
+{{elif primeira_data.month==12:}}
+{{mes="Dezembro"}}
+{{pass}}
+{{if primeira_data.month==1:}}
+    {{primeira_data=datetime.date(primeira_data.year-1, 12, 1)}}
+{{else:}}
+    {{primeira_data=datetime.date(primeira_data.year,  primeira_data.month-1, 1)}}
+{{pass}}
+
+{{total=0}}
+<div class="py-1">
+    
+       
+    
+      <div class="row">
+        <div class="col-md-12">
+            
+          <a class="text-danger" href="{{=URL('default', 'principal')}}" id="noprint">
+              <i class="fa fa-fw fa-1x py-1 fa-angle-double-left text-danger"></i>Voltar ao Inicio</a>
+      
+            <center>
+            <h5 class=""> 
+                <a  href="{{=URL('acesso', args=[primeira_data.month,primeira_data.year])}}" id="noprint">
+                  <i class="fa fa-fw fa-1x py-1 fa-arrow-left "></i>Mês passado</a>
+                  <b>{{=mes}} de {{=primeira_data.year}}</b>
+                <a  href="{{=URL('acesso',  args=[ultima_data.month,ultima_data.year])}}" id="noprint">
+                      Proximo Mês
+                    <i class="fa fa-fw fa-1x py-1 fa-arrow-right "></i></a>
+          
+      </h5>
+            </center>
+            
+             </div>
+          {{if False:}}
+        <div class="col-md-6" id="noprint">
+            <div class="form-group row">
+                <input type="text" class="form-control col-10 col-form-label" name="busca" placeholder="Faça uma pesquisa" id="noprint"/>
+              <div class="col-2">
+                  <a class=" botao" id="noprint">
+                      <i class="fa text-success fa-search  fa-2x"></i>
+                  </a>
+                </div>
+            </div>
+      </div>
+    {{pass}}
+    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Data</th>
+                  <th>Imovel</th>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th class="text-center" id="noprint">Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {{a=0}}
+                  {{for row in rows:}}
+                  {{a+=1}}
+                 
+                <tr>
+                   
+                    
+                    {{total+=row.valor}}
+                    <th><i class="fa fa-check-square-o" aria-hidden="true"></i></th>
+                    <th>{{=("{}/{}/{}".format(row.data_pagamento.day,row.data_pagamento.month,row.data_pagamento.year))}}</th>
+                  <td nowrap="true">{{=row.imovel.subtipo}}/{{=row.imovel.lougradouro}} {{=row.imovel.numero}}</td>
+                  <td nowrap="true">{{=(row.descricao)[0:35]}}</td>
+                   
+                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor,2)).replace(",",".")}}0</th>
+
+                  
+                    
+                        <td nowrap="true" class="text-center" id="noprint">
+                       
+                        <a href="{{=URL('alterar', args=[row.id])}}">
+                            <i class="fa fa-fw fa-1x py-1 fa-check-square-o  text-success"></i>
+                        </a>
+                        </td>
+                </tr>
+                    
+                    {{pass}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="py-3 text-center" >
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-5 col-md-6 p-4"> <i class="d-block fa fa-circle-o fa-3x mb-2 text-muted"></i>
+          <h4> <b>Total das Despesas</b> </h4>
+          <p>R$ {{="{:,}".format(round(total,2)).replace(",",".")}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

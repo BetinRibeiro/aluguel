@@ -79,7 +79,7 @@
                 {{elif contrato.virgencia_meses==48:}}<b> 48 (QUARENTA E OITO) MESES</b>
                 {{elif contrato.virgencia_meses==60:}}<b> 60 (SESSENTA) MESES</b>
                 {{elif contrato.virgencia_meses==120:}}<b> 120 (CENTO E VINTE) MESES</b>
-                {{pass}} de <b>R$ {{="{:,}".format(round(contrato.valor,1)).replace(",",".")}}0 {{if len(contrato.valor_ext)>4:}} ({{=contrato.valor_ext}}){{pass}}</b>, que deverá ser pago na <u>Rua Alencar Peixoto 476 Bairro Centro, Juazeiro do Norte, ou por transferência bancária na conta: AG: 0032 OP: 01 C/C: 42.038-0 J S L OLIVEIRA, CAIXA ECONÔMICA FEDERAL</u>, na forma estabelecida no parágrafo primeiro.</p>
+                {{pass}} de <b>R$ {{="{:,}".format(round(contrato.valor,1)).replace(",",".")}}0 {{if len(contrato.valor_ext)>4:}} ({{=contrato.valor_ext}}){{pass}}</b>, que deverá ser pago na <u>Rua Alencar Peixoto 476 Bairro Centro, Juazeiro do Norte, ou por transferência bancária na conta: AG: 0032 OP: 01 C/C: 42.038-0  JOSEFA SILVANETE LEITE DE OLIVEIRA, CAIXA ECONÔMICA FEDERAL</u>, na forma estabelecida no parágrafo primeiro.</p>
             
             <p>
                 <b>Parágrafo Primeiro</b> – Os aluguéis deverão ser pagos no local indicado na cláusula anterior até o dia <b>
@@ -115,28 +115,27 @@
                 {{elif contrato.dia_vencimento==30:}}30 (TRINTA)
                 {{elif contrato.dia_vencimento==31:}}31 (TRINTA E UM)
 
-                {{pass}}</b> com tolerância de<b> 5 (cinco) dias</b> subseqüente ao vencimento sem multa, após essa data, somente acrescido de juros de mora, honorários advocatícios, mesmo que a cobrança seja extrajudicial e correção monetária, esta última hipótese se o atraso for superior a <b>30 (trinta) dias</b>.
+                {{pass}}</b> com tolerância de<b> 5 (cinco) dias</b> subseqüente ao vencimento sem multa, após essa data, Após essa data, somente com acréscimo de juros de mora e correção monetária, esta última hipótese se o atraso for superior a<b> 30 (trinta) dias</b>.
             </p>
             <p>
-               <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parágrafo Segundo</b> – Sempre que o pagamento for efetuado por meio de cheque, a divida somente estará quitado após o efetivo pagamento do aludido cheque, o não pagamento do cheque, por qualquer causa ou motivo, implicará automaticamente incidência
-das cominações para os casos de inadimplência, conforme cláusula quarta, notadamente a multa contratual, os juros moratório convencional monetário incidente sobre o valor da obrigação considerada não paga.
+               <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parágrafo Segundo</b> – Sempre que o pagamento for efetuado por meio de cheque, a dívida somente estará quitada após a efetivacompensação do mesmo.Em caso da não ocorrência de compensação, por qualquer causa ou motivo, implicará automaticamente incidência das cominações para os casos de inadimplência, conforme cláusula quarta, notadamente a multa contratual, os juros moratórios, convencional monetário incidente sobre o valor da obrigação considerada não paga.
 
             </p>
             <p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>QUARTA</b> – Ocorrendo atraso no pagamento do aluguel, no prazo determinado na cláusula 3ª, será o mesmo acrescido de uma multa de 10% (dez por cento) sobre o valor de prestação locatícia mais juros de mora e correção monetária, independentemente do procedimento judicial que porventura for adotado, a título de honorários administrativos. 
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>QUARTA</b> – Ocorrendo atraso no pagamento do aluguel, após o prazo determinado na cláusula 3ª, será o mesmo acrescido de uma multa de 10% (dez por cento) sobre o valor de prestação locatícia mais juros de mora e correção monetária, independentemente do procedimento que porventura for adotado, a título de honorários administrativos.
             </p>
             <p>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>QUINTA</b> – O <b>LOCATÁRIO</b> se obriga a:
             </p>
                    <ul>
                         <li>
-                            <b>A)</b> &nbsp;Manter o imóvel no mais rigoroso estado de conservação e limpeza obriga-se ainda, o <b>LOCATÁRIO</b> além do pagamento de aluguel e satisfazer ao pagamento, por sua conta exclusiva do consumo de água, energia elétrica e esgoto, bem como, todos os demais tributos municipais que recaírem sobre o imóvel locado.
+                            <b>A)</b> &nbsp;Manter o imóvel no mais rigoroso estado de conservação e limpeza, obriga-se ainda, o LOCATÁRIO além do pagamento de aluguel e satisfazer o pagamento, por sua conta exclusiva do consumo de água, energia elétrica e esgoto, bem como, todos os demais tributos municipais que recaírem sobre o imóvel locado.
             </li><br>
                        <li>
-                          <b> B)</b> &nbsp;Fazer, as suas custas, as despesas que porventura se tornarem necessárias para conservação das pinturas, portas de aço, fechaduras, trincos, vidros, torneiras, puxadores, instalações elétricas e sanitárias, limpeza reparos e desentupimento de encanamento de água, esgotos etc. e bem assim a conservação de passeio fronteiriço, mantendo tudo em perfeito estado de funcionamento todo o material empregado para o bom cumprimento desta cláusula deverá ser de qualidade, tipo e medida da existente no imóvel. No caso de prédio residencial, com poço, bomba para água e fossas, os respectivos encargos de limpeza, manutenção e reparos, ficarão sempre por conta do <b>LOCATÁRIO</b>.
+                          <b> B)</b> &nbsp;Fazer, as suas custas, as despesas que porventura se tornarem necessárias para conservação das pinturas, portas de aço, fechaduras, trincos, vidros, torneiras, puxadores, instalações elétricas e sanitárias, limpeza reparos e desentupimento de encanamento de água, esgotos etc. e bem assim a conservação de passeio fronteiriço. Mantendo tudo em perfeito estado de funcionamento, todo o material empregado para o bom cumprimento desta cláusula deverá ser de qualidade, tipo e medida da existente no imóvel. No caso de prédio residencial, com poço, bomba para água e fossas, os respectivos encargos de limpeza, manutenção e reparos, ficarão sempre por conta do <b>LOCATÁRIO</b>.
                        </li><br>
                        <li>
-                           <b>C)</b> &nbsp;Não fazer qualquer instalação ou adaptações ou benfeitorias, quaisquer que sejam sua natureza, inclusive necessária, sem a autorização do <b>LOCADOR</b>. Estas uma vez feitas incorporação ao imóvel e não serão indenizadas e nem gerarão direito de retenção.
+                           <b>C)</b> &nbsp;Não fazer qualquer instalação ou adaptações ou benfeitorias, quaisquer que sejam sua natureza, inclusive necessária, sem a autorização do <b>LOCADOR</b>. Estas uma vez feitas incorporadas ao imóvel, não serão indenizadas e nem gerarão direito de retenção.
                        </li><br>
                        <li>
                            <b>D)</b> &nbsp;Não pôr vitrinas, anúncios, ou dísticos na parte do prédio senão nos lugares para isso determinado e com as dimensões e formatos aprovados, previamente pelo <b>LOCADOR</b>.</li><br>
@@ -181,9 +180,11 @@ das cominações para os casos de inadimplência, conforme cláusula quarta, not
 .  
 </p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>VIGÉSIMA SEGUNDA</b> - O ALUGUEL PACTUADO NA CLÁSULA 3ª deste contrato será reajustado <b>ANUALMENTE</b> com aumento conforme a majoração (mercado) mais variação de IGP-DI, FGV, INCC/FVG, IPC-DI qual dessas variações apresentarem maior índice, ou será renovado mediante livre negociação entre as partes.
 
-	</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>VIGÉSIMA TERCEIRA</b> - O <B>LOCATÁRIO</B> obriga-se, no ato de devolução do imóvel a apresentar as certidões negativas de consumo de água e energia elétrica.
+	</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Findo o presente contrato ou sendo a locação do <B>LOCATÁRIO</B> continuar na posse do imóvel locado a partir do dia seguinte ao final do contrato, considerar-se-á renovado o contrato em todos os seus termos e garantias, inclusive o fiador, e o aluguel será majorado na forma e nos prazos estabelecidos.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>VIGÉSIMA TERCEIRA</b> - O <B>LOCATÁRIO</B> obriga-se, no ato de devolução do imóvel a apresentar as certidões negativas de consumo de água e energia elétrica.
 
-	</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Findo o presente contrato ou sendo a locação do <B>LOCATÁRIO</B> continuar na posse do imóvel locado a partir do dia seguinte ao final do contrato, considerar-se-á renovado o contrato em todos os seus termos e garantias, inclusive o fiador, e o aluguel será majorado na forma e nos prazos estabelecidos.
+	
 
 	</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>VIGÉSIMA QUARTA</b> – Finda, extinta ou rescindida a locação por qualquer motivo, obriga-se o <B>LOCATÁRIO</B> a devolver as chaves do imóvel, perfeitamente pintado, limpo e encerado, completo de chaves, ferragens, vidros, louças sanitárias, instalações hidráulicas e elétricas, sem despesas para o <B>LOCADOR</B>, nos escritórios da Administradora ou aonde vier a ser designado pelo <B>LOCADOR</B>. Nessa oportunidade, será o imóvel vistoriado por pessoa de confiança do <B>LOCADOR</B> ou da Administradora a fim de confirmar se o imóvel se encontra nas condições exigidas, ficando o <B>LOCATÁRIO</B> obrigado a pagar as indenizações pelos danos que forem verificados por culpa direta ou indireta ou ainda, pelo simples desgaste do uso.
 <br>
@@ -209,7 +210,7 @@ das cominações para os casos de inadimplência, conforme cláusula quarta, not
 
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Não fazendo tal comprovação autoriza o <b>LOCADOR</b> a executar as obras necessárias e reparos, fazendo a cobrança executiva dele <b>LOCATÀRIO</b>. </p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, assinam também o presente contrato como fiador e principal pagador, solidariamente com o <b>LOCATÁRIO</b> por todas as obrigações neste exaradas, cuja responsabilidade, entretanto, perdurará até a entrega real e efetiva das chaves do imóvel locado, especialmente quanto ao pagamento do aluguel mensal, <b>AO SENHOR(A): {{=contrato.avalista.nome}}, {{if contrato.avalista.tipo_pessoa=="FÍSICA":}} CPF: {{=contrato.avalista.cpf}},  RG: {{=contrato.avalista.rg}} {{else:}} CNPJ: {{=contrato.avalista.cpf}} {{pass}}, residente na  {{=contrato.avalista.lougradouro}} , N° {{=contrato.avalista.numero}}, BAIRRO: {{=contrato.avalista.bairro}} , {{=contrato.avalista.cidade}}{{=contrato.avalista.uf}},{{if len(contrato.avalista.telefone)>10:}}  TELEFONE {{=contrato.avalista.TELEFONE}},{{pass}}</b>  FIADOR declara, expressamente que a sua responsabilidade perdurará até a entrega  das chaves, renunciando, à faculdade contida no art. 835 do código civil.As partes contratantes elegem o foro da situação do imóvel, qualquer que seja o seu domicílio. </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, assinam também o presente contrato como fiador e principal pagador, solidariamente com o <b>LOCATÁRIO</b> por todas as obrigações neste exaradas, cuja responsabilidade, entretanto, perdurará até a entrega real e efetiva das chaves do imóvel locado, especialmente quanto ao pagamento do aluguel mensal, <b>AO SENHOR(A): {{=contrato.avalista.nome}}, {{if contrato.avalista.tipo_pessoa=="FÍSICA":}} CPF: {{=contrato.avalista.cpf}},  RG: {{=contrato.avalista.rg}} {{else:}} CNPJ: {{=contrato.avalista.cpf}} {{pass}}, residente na  {{=contrato.avalista.lougradouro}} , N° {{=contrato.avalista.numero}}, BAIRRO: {{=contrato.avalista.bairro}} , {{=contrato.avalista.cidade}}{{=contrato.avalista.uf}},{{if len(contrato.avalista.telefone)>10:}}  {{=len(contrato.avalista.telefone)}}TELEFONE {{=contrato.avalista.TELEFONE}},{{pass}}</b>  FIADOR declara, expressamente que a sua responsabilidade perdurará até a entrega  das chaves, renunciando, à faculdade contida no art. 835 do código civil.As partes contratantes elegem o foro da situação do imóvel, qualquer que seja o seu domicílio. </p>
 {{pass}}
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E por estarem justos e contratados, assinam o presente instrumento em 02 (duas vias) de igual teor, na presença de testemunhas que igualmente abaixo assinam: </p>
             <br>
@@ -239,7 +240,7 @@ das cominações para os casos de inadimplência, conforme cláusula quarta, not
 <br><br><br>
 <br>
             <p>
-                ___________________________________________
+                ____________________________________________________
             </p>
     <p><b>{{=locador.nome}}</b></p>
     <p><b>CNPJ: {{=locador.cpf}}</b></p>
@@ -247,7 +248,7 @@ das cominações para os casos de inadimplência, conforme cláusula quarta, not
     <p><b>FONE: {{=locador.telefone}}</b></p>
 <br><br><br>
             <p>
-                ___________________________________________
+                ____________________________________________________
             </p>
     <p><b>{{=locatario.nome}}</b></p>
     <p><b>CPF/CNPJ: {{=locatario.cpf}}</b></p>
@@ -256,7 +257,7 @@ das cominações para os casos de inadimplência, conforme cláusula quarta, not
             {{if contrato.avalista!=51:}}
 <br><br><br>
             <p>
-                ___________________________________________
+                ____________________________________________________
             </p>
     <p><b>{{=contrato.avalista.nome}}</b></p>
     <p><b>CPF/CNPJ: {{=contrato.avalista.cpf}}</b></p>

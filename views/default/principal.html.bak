@@ -37,7 +37,7 @@
                                 <a  href="{{=URL('pessoa', 'acesso')}}">Lista Pessoas</a>
                             </li>
                             <li class="list-group-item"><i class="fa fa-barcode   text-primary mr-2"></i>
-                               <a href="{{=URL('lista_despesa')}}">Lista Despesas</a>
+                               <a href="{{=URL('despesa', 'acesso', args=[data.month,data.year])}}">Lista Despesas</a>
                             </li>
 
                         </ul>
@@ -78,8 +78,8 @@
                             </li>
                             <li class="list-group-item"><i class="fa fa-database text-primary mr-2"></i>
                                 <a  href="{{=URL('contrato', 'todos_contratos')}}">Lista de Contratos</a>
-                             <li class="list-group-item"><i class="fa fa-cogs mr-2"></i>
-                                <a class="text-dark" href="#">Outra opção (Indisponivel)</a>
+                              <li class="list-group-item"><i class="fa fa-barcode   text-primary mr-2"></i>
+                               <a href="{{=URL('#')}}">Outra Opção</a>
                             </li>
 
                         </ul>

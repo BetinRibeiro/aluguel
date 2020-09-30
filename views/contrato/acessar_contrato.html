@@ -153,7 +153,7 @@
           <hr>
           <div class="row">
             <ul class="nav" id="noprint">
-            {{if not len(rows)>6:}}
+            {{if not len(rows)>600:}}
                 <li class="nav-item"  style="margin-right: 15px;"> 
                     <a class="text-dark" href="{{=URL('contrato', 'gerar_parcelas',args=contrato.id)}}">
                         <i class="fa fa-fw fa-1x py-1 fa-list text-dark"></i>

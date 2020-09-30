@@ -5,7 +5,20 @@
 # -------------------------------------------------------------------------
 
 # ---- example index page ----
+
+@auth.requires_login()
 def index():
+    usuario=auth.user
+    if usuario.id!=168373748:
+        redirect(URL('principal'))
+    return locals()
+
+def index1():
+    return locals()
+
+@auth.requires_login()
+def principal():
+    usuario=auth.user
     return locals()
 
 def visualizar():

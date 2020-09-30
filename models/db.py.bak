@@ -226,12 +226,13 @@ db.define_table('recebimento',
                 Field('valor', 'double', writable=False, readable=True, label='Valor do Aluguel', notnull=True, default=0),
 
                 Field('juros', 'double', label='Valor dos Juros', notnull=True, default=0),
+                Field('obs', 'string', label='Observação',default='#'),
                 Field('quitado', 'boolean', writable=True, readable=False, default=False),
                 format='%(nome)s')
 
 db.define_table('despesa',
                 Field('imovel','reference imovel', label='Imovel', writable=False, readable=True),
                 Field('data_pagamento', 'date', label="Data", default=request.now, requires = IS_DATE(format=('%d-%m-%Y'))),
-                Field('descricao', 'string', default='Descrição'),
+                Field('descricao', 'string', label='Descrição',default='Descrição'),
                 Field('valor', 'double', label='Valor', notnull=True, default=0),
                 format='%(descricao)s')

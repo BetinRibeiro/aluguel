@@ -1,21 +1,13 @@
 # -*- coding: utf-8 -*-
-# -------------------------------------------------------------------------
-# This is a sample controller
-# this file is released under public domain and you can use without limitations
-# -------------------------------------------------------------------------
-
-# ---- example index page ----
-
-@auth.requires_login()
+@cache.action(time_expire=900, cache_model=cache.ram, quick='P')
 def index():
     usuario=auth.user
-    if usuario.id!=1:
-        redirect(URL('principal'))
     return locals()
 
 def index1():
     return locals()
 
+@cache.action()
 @auth.requires_login()
 def principal():
     usuario=auth.user
@@ -45,7 +37,7 @@ def grid():
 # ---- Embedded wiki (example) ----
 def wiki():
     auth.wikimenu() # add the wiki to the menu
-    return auth.wiki() 
+    return auth.wiki()
 
 # ---- Action for login/register/etc (required for auth) -----
 def user():

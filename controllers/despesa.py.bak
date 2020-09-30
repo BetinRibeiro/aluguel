@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+import datetime
+@auth.requires_login()
+def acesso(): 
+    data=request.now.year
+    ano=request.now.month
+    mes=request.args(0, cast=int)
+    ano=request.args(1, cast=int)
+    primeira_data=datetime.date(ano, mes, 1)
+    ultima_data=datetime.date(ano, mes, 1)
+
+    if (mes==12):
+        ultima_data=datetime.date(ano+1, 1, 1)
+    else:
+        ultima_data=datetime.date(ano, mes+1, 1)
+    rows = db((db.despesa.data_pagamento>=primeira_data)&(db.despesa.data_pagamento<ultima_data)).select(orderby=db.despesa.data_pagamento)
+    return locals()

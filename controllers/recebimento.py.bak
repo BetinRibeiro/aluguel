@@ -24,6 +24,7 @@ def acesso():
 
 @auth.requires_login()
 def alterar_quitar():
+    data=request.now
     response.view = 'generic.html' # use a generic view
     recebimento=db.recebimento(request.args(0, cast=int))
     db.recebimento.id.readable = False
@@ -36,7 +37,7 @@ def alterar_quitar():
     if form.process().accepted:
         recebimento=db.recebimento(request.args(0, cast=int))
         if recebimento.quitado:
-            redirect(URL('acesso',args=recebimento.id))
+            redirect(URL('recebimento_periodo', args=[data.month,data.year]))
         else:
             redirect(URL('acesso',args=recebimento.contrato_aluguel))
     elif form.errors:
@@ -56,7 +57,6 @@ def ver_recibo():
     imovel=db.imovel(contrato.imovel)
     return locals()
 
-@auth.requires_login()
 def recebimento_periodo():
     data=request.now.year
     ano=request.now.month

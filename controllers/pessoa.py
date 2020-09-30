@@ -32,7 +32,7 @@ def alterar_pessoa():
     rows += db((db.contrato_aluguel.locatario==(request.args(0)))).select()
     rows += db((db.contrato_aluguel.avalista==(request.args(0)))).select()
     deletar= True
-    if len(rows)>0:
+    if len(rows)>5:
         deletar= False
         db.pessoa.id.readable = False
         db.pessoa.id.writable = False

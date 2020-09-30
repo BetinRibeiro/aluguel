@@ -1,5 +1,4 @@
 {{extend 'layout.html'}}
-{{from datetime import *}}
 {{import datetime}}
 {{data=request.now}}
 <hr>
@@ -37,7 +36,7 @@
                                 <a  href="{{=URL('pessoa', 'acesso')}}">Lista Pessoas</a>
                             </li>
                             <li class="list-group-item"><i class="fa fa-barcode   text-primary mr-2"></i>
-                               <a href="{{=URL('#')}}">Lista Despesas</a>
+                               <a href="{{=URL('despesa', 'acesso', args=[data.month,data.year])}}">Lista Despesas</a>
                             </li>
 
                         </ul>

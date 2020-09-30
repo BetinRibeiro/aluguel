@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <center>
           <h5>Recibo de Aluguel {{=contrato.tipo}} / {{=b}} de {{=contrato.virgencia_meses}}</h5>
-                {{b+=1}}
+                
                     {{a+=1}}
                 </center>
               <div class="table-responsive table-sm">

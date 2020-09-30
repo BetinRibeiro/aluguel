@@ -41,15 +41,15 @@
                     <tr class="table-danger" >
                     {{pass}}
                     <th>{{=a}}</th>
-                  <td nowrap="true">{{=row.imovel.lougradouro}}</td>
-                  <td nowrap="true">{{=row.locatario.nome}}</td>
+                  <td >{{=row.imovel.lougradouro}}</td>
+                  <td >{{=row.locatario.nome}}</td>
                   <th nowrap="true">R$ {{="{:,}".format(round(row.valor,1)).replace(",",".")}}0</th>
                     {{if row.data_inicial.year!=row.data_final.year:}}
                   <th nowrap="true">{{=("{}/{}".format(row.data_inicial.month,row.data_inicial.year))}} à {{=("{}/{}".format(row.data_final.month,row.data_final.year))}}</th>
-                    
+
                   <td  nowrap="true" class="text-center" id="noprint">
-                      
-                    
+
+
                       <a href="{{=URL('acessar_contrato', args=row.id)}}">
                     <i class="fa fa-fw fa-1x py-1 fa-book"></i>
                       </a>
@@ -63,19 +63,14 @@
                     {{else:}}
                     <th id="noprint">Gerar Recebimetos--></th>
                     <td class="text-center" id="noprint">
-                    {{if not usuario.id==1424:}}
                         <a href="{{=URL('contrato', 'gerar_parcelas',args=row.id)}}">
                     <i class="fa fa-fw fa-1x py-1 fa-share-square-o"></i>
                       </a>
-                        {{pass}}
                     <a href="{{=URL('alterar_contrato', args=row.id)}}">
                         <i class="fa fa-fw fa-1x py-1 fa-sticky-note  text-warning"></i>
                       </a>
-                        
-                        
                     </td>
                     {{pass}}
-                    
                     {{pass}}
                 </tr>
               </tbody>

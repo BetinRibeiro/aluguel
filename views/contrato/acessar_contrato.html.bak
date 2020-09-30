@@ -232,12 +232,14 @@
                             </tr>
                             
                         {{pass}}
+                            {{if len(rows)>0:}}
                             {{if rows.last().quitado=="True":}}
                             {{contrato.finalizado=True}}
                             {{contrato.update_record()}}
                             {{else:}}
                             {{contrato.finalizado=False}}
                             {{contrato.update_record()}}
+                            {{pass}}
                             {{pass}}
                         </tbody>
                     </table>

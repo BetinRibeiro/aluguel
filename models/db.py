@@ -24,7 +24,7 @@ if request.global_settings.web2py_version < "2.15.5":
 # -------------------------------------------------------------------------
 # once in production, remove reload=True to gain full speed
 # -------------------------------------------------------------------------
-configuration = AppConfig(reload=True)
+configuration = AppConfig()
 
 if not request.env.web2py_runtime_gae:
     # ---------------------------------------------------------------------
@@ -226,6 +226,7 @@ db.define_table('recebimento',
                 Field('valor', 'double', writable=False, readable=True, label='Valor do Aluguel', notnull=True, default=0),
 
                 Field('juros', 'double', label='Valor dos Juros', notnull=True, default=0),
+                Field('obs', 'string', label='Observação',default='#'),
                 Field('quitado', 'boolean', writable=True, readable=False, default=False),
                 format='%(nome)s')
 
