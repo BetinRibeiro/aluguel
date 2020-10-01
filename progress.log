@@ -2430,3 +2430,16 @@
 [2020-09-25 19:55:28] EDIT localfs/views/contrato/acessar_contrato.html: 0
 [2020-09-25 19:56:06] EDIT localfs/views/contrato/acessar_contrato.html: 0
 [2020-09-25 20:39:52] EDIT localfs/views/layout.html: 0
+[2020-09-30 13:34:00] EDIT localfs/models/db.py: 0
+[2020-09-30 13:35:47] EDIT localfs/models/menu.py: -10
+[2020-09-30 13:36:08] EDIT localfs/controllers/default.py: -1
+[2020-09-30 14:31:24] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:31:45] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:33:23] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:33:40] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:36:56] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:38:01] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:38:41] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:40:48] EDIT localfs/views/despesa/acesso.html: 1
+[2020-09-30 14:41:59] EDIT localfs/views/despesa/acesso.html: 0
+[2020-09-30 14:43:53] EDIT localfs/views/despesa/acesso.html: -1

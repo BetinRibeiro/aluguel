@@ -107,8 +107,8 @@
                   <td nowrap="true">{{=row.imovel.subtipo}}/{{=row.imovel.lougradouro}} {{=row.imovel.numero}}</td>
                   <td nowrap="true">{{=(row.descricao)[0:35]}}</td>
                    
-                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor,2)).replace(",",".")}}0</th>
-
+                  <th nowrap="true">R$ {{="{:,}".format(round(row.valor,0)).replace(".",",")}}</th>
+<th>R$ {{="{:,}".format(round(total,0)).replace(".",",")}}</th>
                   
                     
                         <td nowrap="true" class="text-center" id="noprint">

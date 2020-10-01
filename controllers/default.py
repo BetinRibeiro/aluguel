@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-@cache.action(time_expire=900, cache_model=cache.ram, quick='P')
 def index():
     usuario=auth.user
     return locals()

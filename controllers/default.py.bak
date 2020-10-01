@@ -7,7 +7,7 @@ def index():
 def index1():
     return locals()
 
-
+@cache.action()
 @auth.requires_login()
 def principal():
     usuario=auth.user

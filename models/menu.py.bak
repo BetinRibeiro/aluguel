@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 response.menu = [
-    (T('Home'), False, URL('default', 'index'), []),
+    (T('Home'), False, URL('default', 'principal'), []),
     (T('Cadastro'), False, None, [
             (T('Pessoa'), False, URL('pessoa', 'cadastro_pessoa'), []),
             (T('Imovel'), False, URL('imovel', 'cadastro_imovel'), []),

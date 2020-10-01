@@ -7,16 +7,7 @@
 
 response.menu = [
     (T('Home'), False, URL('default', 'principal'), []),
-    (T('Cadastro'), False, None, [
-            (T('Pessoa'), False, URL('pessoa', 'cadastro_pessoa'), []),
-            (T('Imovel'), False, URL('imovel', 'cadastro_imovel'), []),
-            (T('Contrato'), False, URL('contrato', 'cadastrar_contrato'), []),
-    ]),
-    (T('Consulta'), False, None, [
-        (T('Pessoa'), False, URL('pessoa', 'acesso'), []),
-        (T('Imovel'), False, URL('imovel', 'acesso'), []),
-        (T('Contratos'), False, URL('contrato', 'todos_contratos'), []),
-    ]),
+   
   
 ]
 
