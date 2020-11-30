@@ -98,7 +98,7 @@ def alterar_imovel():
 @auth.requires_login()
 def acesso():
     #response.view = 'generic.html' # use a generic view
-    rows = db(db.imovel).select(orderby=db.imovel.bairro,limitby=(0,50))
+    rows = db(db.imovel).select(orderby=db.imovel.bairro,limitby=(0,550))
     consul=(request.args(0))
     if (consul):
         if (consul!='disponiveis'):
@@ -107,7 +107,7 @@ def acesso():
                       (db.imovel.lougradouro.contains(request.args(0)))|
                       (db.imovel.subtipo.contains(request.args(0)))).select(orderby=db.imovel.id,limitby=(0,50))
         else:
-            rows = db(db.imovel.disponivel==True).select(orderby=db.imovel.bairro,limitby=(0,50))
+            rows = db(db.imovel.disponivel==True).select(orderby=db.imovel.bairro,limitby=(0,550))
     tmn4=[]
     for r in rows:
         #todos contratos do imovel ou contratos do imovel que não foram finalizados
