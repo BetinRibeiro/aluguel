@@ -2445,3 +2445,12 @@
 [2020-09-30 14:43:53] EDIT localfs/views/despesa/acesso.html: -1
 [2020-11-24 14:15:14] EDIT localfs/controllers/imovel.py: 0
 [2020-11-24 14:19:36] EDIT localfs/controllers/imovel.py: 0
+[2021-01-19 18:04:26] EDIT localfs/controllers/contrato.py: 0
+[2021-01-19 18:08:20] EDIT localfs/controllers/contrato.py: 0
+[2021-01-19 18:08:29] EDIT localfs/controllers/contrato.py: 0
+[2021-01-19 18:12:16] EDIT localfs/controllers/contrato.py: 0
+[2021-01-19 18:15:05] EDIT localfs/views/contrato/todos_contratos.html: 0
+[2021-01-19 18:15:45] EDIT localfs/views/contrato/todos_contratos.html: 0
+[2021-01-19 18:17:08] EDIT localfs/views/contrato/todos_contratos.html: 0
+[2021-01-19 18:20:23] EDIT localfs/views/contrato/todos_contratos.html: 0
+[2021-01-19 18:20:59] EDIT localfs/views/contrato/todos_contratos.html: 0

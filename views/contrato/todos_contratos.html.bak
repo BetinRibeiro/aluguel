@@ -41,10 +41,10 @@
                     <tr class="table-danger" >
                     {{pass}}
                     <th>{{=a}}</th>
-                  <td nowrap="true">{{=row.imovel.lougradouro}}</td>
-                  <td nowrap="true">{{=row.locatario.nome}}</td>
+                  <td >{{=row.imovel.lougradouro}}</td>
+                  <td >{{=row.locatario.nome}}</td>
                   <th nowrap="true">R$ {{="{:,}".format(round(row.valor,1)).replace(",",".")}}0</th>
-                    {{if row.data_inicial.year!=row.data_final.year:}}
+                    {{if (row.data_inicial.year!=row.data_final.year)or(row.data_inicial.day==1):}}
                   <th nowrap="true">{{=("{}/{}".format(row.data_inicial.month,row.data_inicial.year))}} à {{=("{}/{}".format(row.data_final.month,row.data_final.year))}}</th>
 
                   <td  nowrap="true" class="text-center" id="noprint">

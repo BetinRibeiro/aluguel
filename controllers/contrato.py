@@ -112,7 +112,7 @@ def acessar_contrato():
 def gerar_parcelas():
     contrato = db.contrato_aluguel(request.args(0, cast=int))
     recebimentos = db(db.recebimento.contrato_aluguel == contrato.id).select()
-    if len(recebimentos)>1:
+    if len(recebimentos)>1000:
         db(db.recebimento.contrato_aluguel == contrato.id).delete()
         redirect(URL('acessar_contrato',args=request.args(0, cast=int)))
     if len(recebimentos)<1:
@@ -120,7 +120,7 @@ def gerar_parcelas():
         if contrato.data_inicial.day>30:
             contrato.data_inicial=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month, 30)
         if contrato.data_inicial.month==1:
-            datafinal=datetime.date(contrato.data_inicial.year-1, 1, contrato.data_inicial.day)
+            datafinal=datetime.date(contrato.data_inicial.year-1, 12, contrato.data_inicial.day)
         elif contrato.data_inicial.month==3 and contrato.data_inicial.year>28:
             datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month-1, 28)
         elif contrato.data_inicial.month==12:

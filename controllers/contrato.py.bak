@@ -106,7 +106,7 @@ def acessar_contrato():
     locador = db.pessoa(db.pessoa.id==contrato.locador)
     locatario = db.pessoa(db.pessoa.id==contrato.locatario)
     avalista = db.pessoa(db.pessoa.id==contrato.avalista)
-    rows = db(db.recebimento.imovel == contrato.id).select()
+    rows = db(db.recebimento.contrato_aluguel == contrato.id).select()
     return locals()
 
 def gerar_parcelas():
@@ -120,7 +120,7 @@ def gerar_parcelas():
         if contrato.data_inicial.day>30:
             contrato.data_inicial=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month, 30)
         if contrato.data_inicial.month==1:
-            datafinal=datetime.date(contrato.data_inicial.year-1, 1, contrato.data_inicial.day)
+            datafinal=datetime.date(contrato.data_inicial.year-1, 12, contrato.data_inicial.day)
         elif contrato.data_inicial.month==3 and contrato.data_inicial.year>28:
             datafinal=datetime.date(contrato.data_inicial.year, contrato.data_inicial.month-1, 28)
         elif contrato.data_inicial.month==12:
